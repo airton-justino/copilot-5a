@@ -1,32 +1,40 @@
-# copiloto-5a
+# copilot-5a
 
-Base de contexto funcional e instruções para uso do GitHub Copilot em projetos Salesforce e migração de processos do Zendesk para Salesforce no 5A.
+Base de contexto funcional para uso do GitHub Copilot em um projeto de substituição de processos operados no Zendesk por processos estruturados no Salesforce.
+
+## Objetivo
+
+Apoiar documentação funcional, análise de processos, regras de negócio e estruturação de backlog do projeto.
 
 ## Estrutura do repositório
 
-- `.github/copilot-instructions.md`  
-  Instruções para orientar o comportamento do GitHub Copilot no projeto.
+- `.github/copilot-instructions.md`
+  Instruções para orientar o comportamento do Copilot no projeto.
 
-- `docs/contexto-negocio.md`  
-  Visão geral e objetivo do contexto funcional do repositório.
+- `docs/01-contexto`
+  Visão geral, decisões abertas e consolidação de status/canais/SLA.
 
-- `docs/fluxos-operacionais.md`  
-  Registro de fluxos AS-IS e TO-BE.
+- `docs/02-processos-listing`
+  Processos relacionados a Listing Quality e reclamações.
 
-- `docs/regras-negocio.md`  
-  Consolidação de regras de negócio.
+- `docs/03-processos-placas-lockbox`
+  Processos de placas, pós-agendamento, logística e lockbox.
 
-- `docs/integracoes.md`  
-  Documentação de integrações entre sistemas.
+- `docs/04-processos-fotos`
+  Processos relacionados a fotos, reagendamentos, suporte e fluxos com proprietário/fotógrafo.
 
-- `docs/glossario.md`  
-  Glossário de termos e siglas do projeto.
+- `docs/05-regras-negocio`
+  Regras transversais, status/filas e backlog consolidado.
 
-## Objetivo de uso
+- `docs/06-fontes`
+  Material bruto consolidado utilizado como base para estruturação da documentação.
+
+## Uso esperado
 
 Este repositório deve apoiar:
-- análises funcionais
+- análise funcional
+- documentação AS-IS e TO-BE
 - escrita de histórias de usuário
-- documentação de processos
+- consolidação de regras de negócio
 - estruturação de backlog
-- consolidação de regras e integrações
+- apoio ao uso do GitHub Copilot no contexto do projeto
