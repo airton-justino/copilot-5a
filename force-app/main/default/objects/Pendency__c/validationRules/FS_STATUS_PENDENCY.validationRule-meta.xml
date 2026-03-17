@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_STATUS_PENDENCY</fullName>
+    <active>true</active>
+    <description>Você não pode alterar o status da própria solicitação. Essa ação deve ser feita pelo destinatário.</description>
+    <errorConditionFormula>AND(
+    NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)),
+    ISPICKVAL(OpenSource__c, &apos;Manual&apos;),
+    
+    OR(
+        
+        /* Bloqueia edição do status pelo criador */
+        AND(
+        ISCHANGED(Status__c),
+        $User.Id = CreatedById),
+
+        /* Bloqueia criação com status diferente de &quot;Nova&quot; */
+        AND(
+            ISNEW(),
+            NOT(ISPICKVAL(Status__c, &apos;Nova&apos;)))
+))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Você não pode alterar o status da própria solicitação. Essa ação deve ser feita pelo destinatário.</errorMessage>
+</ValidationRule>

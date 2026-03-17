@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetworksStages__c</fullName>
+    <label>NetworksStages</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aberto</fullName>
+                <default>false</default>
+                <label>Aberto</label>
+            </value>
+            <value>
+                <fullName>Em Andamento</fullName>
+                <default>false</default>
+                <label>Em Andamento</label>
+            </value>
+            <value>
+                <fullName>Aguardando Time Interno</fullName>
+                <default>false</default>
+                <label>Aguardando Time Interno</label>
+            </value>
+            <value>
+                <fullName>Aguardando Cliente</fullName>
+                <default>false</default>
+                <label>Aguardando Cliente</label>
+            </value>
+            <value>
+                <fullName>Resolvido</fullName>
+                <default>false</default>
+                <label>Resolvido</label>
+            </value>
+            <value>
+                <fullName>Fechado</fullName>
+                <default>false</default>
+                <label>Fechado</label>
+            </value>
+            <value>
+                <fullName>Pendente</fullName>
+                <default>false</default>
+                <label>Pendente</label>
+            </value>
+            <value>
+                <fullName>Em espera</fullName>
+                <default>false</default>
+                <label>Em espera</label>
+            </value>
+            <value>
+                <fullName>Reaberto</fullName>
+                <default>false</default>
+                <label>Reaberto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

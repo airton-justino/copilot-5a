@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_CanceledReason__c</fullName>
+    <label>Motivo de Cancelamento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NotFollowWithPartnerRegistry</fullName>
+                <default>false</default>
+                <label>Não seguiu com CRN parceiro</label>
+            </value>
+            <value>
+                <fullName>PaymentMethodNotInCash</fullName>
+                <default>false</default>
+                <label>Meio de pagamento não é mais A Vista</label>
+            </value>
+            <value>
+                <fullName>HouseRegistryNotMustBeUpdated</fullName>
+                <default>false</default>
+                <label>Matrícula não precisa ser averbada</label>
+            </value>
+            <value>
+                <fullName>DontContinueWithFiduciary</fullName>
+                <default>false</default>
+                <label>Não possui alienação fiduciária</label>
+            </value>
+            <value>
+                <fullName>PaymentMethodNotFinanced</fullName>
+                <default>false</default>
+                <label>Meio de pagamento não é mais Financiado</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

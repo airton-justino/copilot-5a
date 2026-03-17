@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MediationCompactLayout</fullName>
+    <fields>Subject</fields>
+    <fields>CaseNumber</fields>
+    <fields>PropertyNumber__c</fields>
+    <fields>Analyst__c</fields>
+    <fields>InspectionRecordTenantReviewFormula__c</fields>
+    <fields>InspectionRecordOwnerReview__c</fields>
+    <fields>PpMulti__c</fields>
+    <fields>HighValue__c</fields>
+    <fields>Despejo__c</fields>
+    <fields>CreatedDate__c</fields>
+    <label>Mediation Compact Layout</label>
+</CompactLayout>

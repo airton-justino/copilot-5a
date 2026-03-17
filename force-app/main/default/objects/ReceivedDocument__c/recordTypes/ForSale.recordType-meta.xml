@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ForSale</fullName>
+    <active>true</active>
+    <label>ForSale</label>
+    <picklistValues>
+        <picklist>ReceivedDocument__c</picklist>
+        <values>
+            <fullName>Certidão Negativa de Débitos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certidão de Tutela e Curatela ou de incapacidade civil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certidão de estado civil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Certificado de Regularidade do FGTS %28CRF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comprovante de residência atualizado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contrato Social %28LTDA ou ME%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convenção não registrada %2B Ata eleição síndico %2B Declaração síndico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convenção registrada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declaração Pessoal de Saúde %28DPS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declaração de IR %2B protocolo de entrega</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declaração de Representação</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declaração de isenção de IR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declaração do Vendedor sobre FGTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escritura de Pacto Antenupcial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estatuto Social Consolidado e Ata de Eleição da atual diretoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extrato do FGTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form%2E Autorização para Análises de Crédito</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form%2E Autorização para Movimentação FGTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form%2E Dados dos Vendedores %E2%80%93 PF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form%2E Dados dos Vendedores %E2%80%93 PJ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form%2E Proposta de Financiamento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form%2ECompradores %E2%80%93 PF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IPTU ou Declaração da Prefeitura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matrícula completa do imóvel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matrícula do imóvel simples</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procuração</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RequestedDocumentFor__c</picklist>
+        <values>
+            <fullName>Comprador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendedor</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Aprovado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Correção solicitada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enviado</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solicitado</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

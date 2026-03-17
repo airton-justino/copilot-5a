@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PendencyType__c</fullName>
+    <label>Tipo de Solicitação</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Solicitação de contato (Parceiro ao cliente)</fullName>
+                <default>false</default>
+                <label>Solicitação de contato (Parceiro ao cliente)</label>
+            </value>
+            <value>
+                <fullName>Solicitação de confirmação de agendamento</fullName>
+                <default>false</default>
+                <label>Solicitação de confirmação de agendamento</label>
+            </value>
+            <value>
+                <fullName>Atualização de contato do cliente</fullName>
+                <default>false</default>
+                <label>Atualização de contato do cliente</label>
+            </value>
+            <value>
+                <fullName>Informação de que o cliente não deseja seguir com o parceiro</fullName>
+                <default>false</default>
+                <label>Informação de que o cliente não deseja seguir com o parceiro</label>
+            </value>
+            <value>
+                <fullName>Cliente solicita o reenvio da minuta</fullName>
+                <default>false</default>
+                <label>Cliente solicita o reenvio da minuta</label>
+            </value>
+            <value>
+                <fullName>Cliente solicita o reenvio da matrícula</fullName>
+                <default>false</default>
+                <label>Cliente solicita o reenvio da matrícula</label>
+            </value>
+            <value>
+                <fullName>Solicitação de Upload da matrícula no Drive</fullName>
+                <default>false</default>
+                <label>Solicitação de Upload da matrícula no Drive</label>
+            </value>
+            <value>
+                <fullName>Aviso de Upload de documentação no Drive</fullName>
+                <default>false</default>
+                <label>Aviso de Upload de documentação no Drive</label>
+            </value>
+            <value>
+                <fullName>Solicitação de agendamento da assinatura</fullName>
+                <default>false</default>
+                <label>Solicitação de agendamento da assinatura</label>
+            </value>
+            <value>
+                <fullName>Aditivo - confirmação</fullName>
+                <default>false</default>
+                <label>Aditivo - confirmação</label>
+            </value>
+            <value>
+                <fullName>Distrato - confirmação</fullName>
+                <default>false</default>
+                <label>Distrato - confirmação</label>
+            </value>
+            <value>
+                <fullName>Documentos - inclusão no Drive</fullName>
+                <default>false</default>
+                <label>Documentos - inclusão no Drive</label>
+            </value>
+            <value>
+                <fullName>Diligência - Status</fullName>
+                <default>false</default>
+                <label>Diligência - Status</label>
+            </value>
+            <value>
+                <fullName>Pasta de DD - inclusão no Drive</fullName>
+                <default>false</default>
+                <label>Pasta de DD - inclusão no Drive</label>
+            </value>
+            <value>
+                <fullName>Contato de BY</fullName>
+                <default>false</default>
+                <label>Contato de BY</label>
+            </value>
+            <value>
+                <fullName>Contato de SL</fullName>
+                <default>false</default>
+                <label>Contato de SL</label>
+            </value>
+            <value>
+                <fullName>Dúvidas</fullName>
+                <default>false</default>
+                <label>Dúvidas</label>
+            </value>
+            <value>
+                <fullName>Direito de preferência - Confirmação</fullName>
+                <default>false</default>
+                <label>Direito de preferência - Confirmação</label>
+            </value>
+            <value>
+                <fullName>Emissão</fullName>
+                <default>false</default>
+                <label>Emissão</label>
+            </value>
+            <value>
+                <fullName>Reemissão</fullName>
+                <default>false</default>
+                <label>Reemissão</label>
+            </value>
+            <value>
+                <fullName>Validação</fullName>
+                <default>false</default>
+                <label>Validação</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

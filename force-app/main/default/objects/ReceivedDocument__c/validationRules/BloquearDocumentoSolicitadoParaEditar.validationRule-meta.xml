@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BloquearDocumentoSolicitadoParaEditar</fullName>
+    <active>true</active>
+    <description>Impede a alteração do campo Documento solicitado para após a criação do registro.</description>
+    <errorConditionFormula>AND(
+  NOT(ISNEW()),
+  ISCHANGED( RequestedDocumentFor__c )
+)</errorConditionFormula>
+    <errorMessage>O campo &quot;Documento solicitado para&quot; não pode ser alterado após a criação do registro.</errorMessage>
+</ValidationRule>

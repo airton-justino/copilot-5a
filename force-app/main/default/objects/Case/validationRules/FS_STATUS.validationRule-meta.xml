@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_STATUS</fullName>
+    <active>false</active>
+    <description>Você não tem permissão para editar este campo. Por gentileza, contatar seu superior imediato.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status,&apos;RESOLVED&apos;),
+NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)),
+RecordType.Name = &quot;For Sale&quot;
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Você não tem permissão para editar este campo. Por gentileza, contatar seu superior imediato.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <description>Should create case</description>
+        <name>ShouldCreateCase</name>
+        <label>Should create case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Else</defaultConnectorLabel>
+        <rules>
+            <name>KeyHolderRoleInsectorOrExternalResponsible</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>GetRelatedEntryAccess.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetKeyLogisticsForRentRecordType</targetReference>
+            </connector>
+            <label>Key holder role insector or external responsible</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Verify inspection operation</description>
+        <name>VerifyInspectionOperation</name>
+        <label>Verify inspection operation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Inspection update</defaultConnectorLabel>
+        <rules>
+            <name>InspectionInsert</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetRelatedEntryAccess</targetReference>
+            </connector>
+            <label>Inspection insert</label>
+        </rules>
+    </decisions>
+    <description>Case creation of record type &quot;KeyLogisticsForRent&quot; and type &quot;Offboarding&quot; based on inspection creation</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Last15Days</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() - 15</expression>
+    </formulas>
+    <interviewLabel>[Inspection] Case Creation Key Logistics For Rent Offboarding {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Inspection] Case Creation Key Logistics For Rent Offboarding</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create new case</description>
+        <name>CreateNewCase</name>
+        <label>Create new case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Inspection__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>GetKeyLogisticsForRentRecordType.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Source__c</field>
+            <value>
+                <stringValue>SalesforceEvent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>Key Logistics For Rent Offboarding</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Get key logistics for rent record type</description>
+        <name>GetKeyLogisticsForRentRecordType</name>
+        <label>Get key logistics for rent record type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>CreateNewCase</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>KeyLogisticsForRent</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Case</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get related entry access</description>
+        <name>GetRelatedEntryAccess</name>
+        <label>Get related entry access</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>ShouldCreateCase</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 3 AND (4 OR 5)</filterLogic>
+        <filters>
+            <field>PropertyId__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Contract__r.PropertyId__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Channel__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>INSPECTION_APP</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>LastModifiedDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>Last15Days</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>KeyHolderRole__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>INSPECTOR</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>KeyHolderRole__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>EXTERNAL_RESPONSIBLE</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>EntryAccess__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>VerifyInspectionOperation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Offboarding</stringValue>
+            </value>
+        </filters>
+        <object>Inspection__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

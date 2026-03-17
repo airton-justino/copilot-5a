@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccessModel__c</fullName>
+    <label>Modelo de acesso</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ASSISTED</fullName>
+                <default>false</default>
+                <label>Assistido</label>
+            </value>
+            <value>
+                <fullName>AUTHORIZED</fullName>
+                <default>false</default>
+                <label>Autorizado</label>
+            </value>
+            <value>
+                <fullName>AUTONOMOUS</fullName>
+                <default>false</default>
+                <label>Autônomo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

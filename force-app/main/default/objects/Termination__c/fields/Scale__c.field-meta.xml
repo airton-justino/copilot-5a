@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scale__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+TEXT(TerminationFlowType__c) = &quot;tt_tr_ge_25&quot;,
+&quot;TR &gt;= 21 dias&quot;,
+IF(
+TEXT(TerminationFlowType__c) = &quot;tt_tr_gt_21&quot;,
+&quot;TR &gt;= 21 dias&quot;,
+IF(
+TEXT(TerminationFlowType__c) = &quot;tt_tr_bt_21_14&quot;,
+&quot;TR 14 a 20 dias&quot;,
+IF(
+TEXT(TerminationFlowType__c) = &quot;tt_tr_bt_13_7&quot;,
+&quot;TR 7 a 13 dias&quot;,
+IF(
+TEXT(TerminationFlowType__c) = &quot;tt_tr_bt_6_4&quot;,
+&quot;TR 4 a 6 dias&quot;,
+IF(
+TEXT(TerminationFlowType__c) = &quot;tt_tr_lt_4&quot;,
+&quot;TR &lt; 4 dias&quot;,
+&quot;&quot;
+)
+)
+)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Régua</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

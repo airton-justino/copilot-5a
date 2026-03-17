@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnassignedReason__c</fullName>
+    <label>Motivo do desencarteiramento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Clientes CNPJ</fullName>
+                <default>false</default>
+                <label>Clientes CNPJ</label>
+            </value>
+            <value>
+                <fullName>PP Multi.</fullName>
+                <default>false</default>
+                <label>PP Multi.</label>
+            </value>
+            <value>
+                <fullName>Despejo.</fullName>
+                <default>false</default>
+                <label>Despejo.</label>
+            </value>
+            <value>
+                <fullName>Contrato com ticket aberto em CSI.</fullName>
+                <default>false</default>
+                <label>Contrato com ticket aberto em CSI.</label>
+            </value>
+            <value>
+                <fullName>Mais que 1 rescisão em andamento.</fullName>
+                <default>false</default>
+                <label>Mais que 1 rescisão em andamento.</label>
+            </value>
+            <value>
+                <fullName>Contrato sem ADM QuintoAndar.</fullName>
+                <default>false</default>
+                <label>Contrato sem ADM QuintoAndar.</label>
+            </value>
+            <value>
+                <fullName>Desencateiramento por decisão da Operação</fullName>
+                <default>false</default>
+                <label>Desencateiramento por decisão da Operação</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

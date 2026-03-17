@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_CASE_CRN</fullName>
+    <active>false</active>
+    <description>Para atualizar o status do CRN, é imprescindível que o cliente informe se optará por seguir com o cartório parceiro.</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS($Profile.Name, &apos;Admin&apos;)),
+ISPICKVAL(PurchaseSaleContract__r.ContinueWithPartnerRegistry__c, &apos;&apos;),
+ISCHANGED(CRNStatus__c))</errorConditionFormula>
+    <errorDisplayField>FS_ContinueWithPartnerRegistry__c</errorDisplayField>
+    <errorMessage>Para atualizar o status do CRN, é imprescindível que o cliente informe se optará por seguir com o cartório parceiro.</errorMessage>
+</ValidationRule>

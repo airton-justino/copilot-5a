@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_ITBI_RETURN_STATUS</fullName>
+    <active>true</active>
+    <description>Você não tem permissão para retroceder o status. Apenas avançar no fluxo.</description>
+    <errorConditionFormula>AND(
+CONTAINS($Profile.Name, &quot;CRN&quot;),
+
+CASE(TEXT(ITBIStatus__c),
+&quot;WAITING_INFORMATION&quot;, 1,
+&quot;ITBI_ISSUED&quot;, 2,
+&quot;ITBI_PAID&quot;, 3,
+0
+) &lt;
+
+CASE(TEXT(PRIORVALUE(ITBIStatus__c)),
+&quot;WAITING_INFORMATION&quot;, 1,
+&quot;ITBI_ISSUED&quot;, 2,
+&quot;ITBI_PAID&quot;, 3,
+0
+)
+)</errorConditionFormula>
+    <errorMessage>Você não tem permissão para retroceder o status. Apenas avançar no fluxo.</errorMessage>
+</ValidationRule>

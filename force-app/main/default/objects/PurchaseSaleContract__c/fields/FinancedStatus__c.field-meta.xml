@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinancedStatus__c</fullName>
+    <label>Status Financiado</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FINANCING AGREEMENT ISSUED</fullName>
+                <default>false</default>
+                <label>Contrato de Financiamento Emitido</label>
+            </value>
+            <value>
+                <fullName>AJ APPROVED</fullName>
+                <default>false</default>
+                <label>AJ Aprovada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MustOpenCase__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked, a new Case will be opened, if unchecked an old Case will be closed.</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Deve abrir Caso?</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>Check_IQ_VT_Answers</name>
+        <label>Check IQ &amp; VT Answers</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IQ_VT_Success_Contact</name>
+            <conditionLogic>(1 OR 2) AND (3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ContactReplyIQ__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ContactReplyVT__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ContactReplyIQ__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>success</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ContactReplyVT__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>success</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Automatic_Create_Key_Logistics_SubCases</targetReference>
+            </connector>
+            <label>IQ &amp; VT Success Contact</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CheckNeedRun</name>
+        <label>Check Need Run</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>CloseCase</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Need Run No</defaultConnectorLabel>
+        <rules>
+            <name>NeedRunYes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.NeedRun__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sim</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.NeedRun__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_IQ_VT_Answers</targetReference>
+            </connector>
+            <label>Check Need Run</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Verify case operation</description>
+        <name>VerifyCaseOperation</name>
+        <label>Verify case operation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>CheckNeedRun</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Case update</defaultConnectorLabel>
+        <rules>
+            <name>CaseInsert</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>InvokeTaskCreationBasedOnCaseType</targetReference>
+            </connector>
+            <label>Case insert</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Verify case record type and type</description>
+        <name>VerifyCaseRecordTypeAndType</name>
+        <label>Verify case record type and type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Else</defaultConnectorLabel>
+        <rules>
+            <name>RecordTypeIsKeyLogisticsForRentAndOnboarding</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>KeyLogisticsForRent</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Key Logistics For Rent Onboarding</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>VerifyCaseOperation</targetReference>
+            </connector>
+            <label>Record type is key logistics for rent and onboarding</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>FORCriticality</name>
+        <dataType>String</dataType>
+        <expression>IF(
+   {!$Record.RelatedContract__r.StartDate} &lt; TODAY(), &quot;Crítico&quot;,
+    IF(
+        {!$Record.RelatedContract__r.StartDate} = TODAY(), &quot;Crítico&quot;,
+        IF(
+            {!$Record.RelatedContract__r.StartDate} = (TODAY() + 1), &quot;Alto&quot;,
+            IF(
+                {!$Record.RelatedContract__r.StartDate} = (TODAY() + 2), &quot;Médio&quot;,
+                IF(
+                    {!$Record.RelatedContract__r.StartDate} = (TODAY() + 3), &quot;Baixo&quot;,
+                    &quot;Baixo&quot;
+                )
+            )
+        )
+    )
+)</expression>
+    </formulas>
+    <interviewLabel>[Case] Maestro Case Key Logistics For Rent Onboarding Before {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Case] Maestro Case Key Logistics For Rent Onboarding After</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>CloseCase</name>
+        <label>CloseCase</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Close_Tasks_Related</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>RESOLVED</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Close_Tasks_Related</name>
+        <label>Update Close Tasks Related</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>WhatId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Cancelled</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Cancelled</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Tasks</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>VerifyCaseRecordTypeAndType</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Automatic_Create_Key_Logistics_SubCases</name>
+        <label>[Automatic] - Create Key Logistics SubCase</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Automatic_CreateKeyLogisticsSubCases</flowName>
+        <inputAssignments>
+            <name>CaseSubject</name>
+            <value>
+                <stringValue>Key Logistics For Rent</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>CaseType</name>
+            <value>
+                <stringValue>Key Logistics For Rent Ride</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>ParentCaseid</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>SubCaseRecordTypeDevName</name>
+            <value>
+                <stringValue>KeyLogisticsForRent</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Invoke task creation based on case type</description>
+        <name>InvokeTaskCreationBasedOnCaseType</name>
+        <label>Invoke task creation based on case type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Task_TaskCreationKeyLogisticsForRentOnboarding</flowName>
+        <inputAssignments>
+            <name>CurrentCase</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

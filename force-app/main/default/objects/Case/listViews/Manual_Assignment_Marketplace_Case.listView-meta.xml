@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manual_Assignment_Marketplace_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Triagem Manual Marketplace</label>
+    <queue>Manual_Assignment_Marketplace</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

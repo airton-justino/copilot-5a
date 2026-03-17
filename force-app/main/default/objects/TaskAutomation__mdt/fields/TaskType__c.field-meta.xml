@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaskType__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Tipo de Task</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Repair</fullName>
+                <default>true</default>
+                <label>Reparo</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <label>Rescisão</label>
+            </value>
+            <value>
+                <fullName>Retention</fullName>
+                <default>false</default>
+                <label>Retenção</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

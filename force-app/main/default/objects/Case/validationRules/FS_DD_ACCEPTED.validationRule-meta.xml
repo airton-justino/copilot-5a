@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_DD_ACCEPTED</fullName>
+    <active>false</active>
+    <description>DD já foi aceita, status não permitido</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(CRNStatus__c, &apos;AWAITING_DD_ACCEPTANCE&apos;),
+NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)),
+ISPICKVAL(PurchaseSaleContract__r.IsDiligenceAccepted__c, &apos;DD_ACCEPTED&apos;),
+ISPICKVAL( ForSaleFlow__c,&apos;CRN&apos;))</errorConditionFormula>
+    <errorDisplayField>CRNStatus__c</errorDisplayField>
+    <errorMessage>DD já foi aceita, status não permitido</errorMessage>
+</ValidationRule>

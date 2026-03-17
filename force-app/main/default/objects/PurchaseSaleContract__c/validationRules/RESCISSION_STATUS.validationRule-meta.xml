@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RESCISSION_STATUS</fullName>
+    <active>false</active>
+    <description>Você não tem permissão para alterar esse valor do Status do Distrado. Por gentileza, consultar o supervisor imediato.</description>
+    <errorConditionFormula>AND(
+    OR(
+        CONTAINS($Profile.Name, &quot;Agent - ForSale&quot;),
+        CONTAINS($Profile.Name, &quot;Agent BPO - ForSale&quot;)
+    ),
+    ISCHANGED(RescissionStatus__c),
+    NOT(ISPICKVAL(RescissionStatus__c, &apos;Cancelado&apos;)),
+    NOT(ISCHANGED(BypassRescissionValidation__c))
+)</errorConditionFormula>
+    <errorDisplayField>RescissionStatus__c</errorDisplayField>
+    <errorMessage>Você não tem permissão para alterar esse valor do Status do Distrado. Por gentileza, consultar o supervisor imediato.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HoldingHefestoAssignmentValidation_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Holding: Hefesto Assignment Validation</label>
+    <queue>HoldingHefestoAssignmentValidation</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

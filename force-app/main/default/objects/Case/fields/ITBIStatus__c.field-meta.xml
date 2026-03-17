@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITBIStatus__c</fullName>
+    <label>Status do ITBI</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NOT_STARTED</fullName>
+                <default>false</default>
+                <label>Não Iniciado</label>
+            </value>
+            <value>
+                <fullName>WAITING_INFORMATION</fullName>
+                <default>true</default>
+                <label>Aguardando Informação</label>
+            </value>
+            <value>
+                <fullName>ITBI_ISSUED</fullName>
+                <default>false</default>
+                <label>ITBI Emitido</label>
+            </value>
+            <value>
+                <fullName>ITBI_PAID</fullName>
+                <default>false</default>
+                <label>ITBI Pago</label>
+            </value>
+            <value>
+                <fullName>ITBI_EXPIRED</fullName>
+                <default>false</default>
+                <label>ITBI Vencido</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

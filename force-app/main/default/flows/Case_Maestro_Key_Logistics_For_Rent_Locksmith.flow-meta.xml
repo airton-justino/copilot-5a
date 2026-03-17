@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <description>Solicitar corrida para a transportadora</description>
+        <name>KL_FR_REQUEST_CARRIER_TRANSPORT_LABEL</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Solicitar corrida para a transportadora</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Check_operation_type</name>
+        <label>Check operation type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>delete operation</defaultConnectorLabel>
+        <rules>
+            <name>insert_operation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>create_task_kl_fr_request_carrier_transport</targetReference>
+            </connector>
+            <label>insert operation</label>
+        </rules>
+        <rules>
+            <name>update_operation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <label>update operation</label>
+        </rules>
+    </decisions>
+    <description>[Case] Maestro Key Logistics For Rent Locksmith</description>
+    <environments>Default</environments>
+    <interviewLabel>[Case Key Logistics For Rent Locksmith {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Case] Maestro Key Logistics For Rent Locksmith</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create Task -  Solicitar corrida para a transportadora
+Task.Type: KL_FR_REQUEST_CARRIER_TRANSPORT</description>
+        <name>create_task_kl_fr_request_carrier_transport</name>
+        <label>Create Task -  Solicitar corrida para a transportadora</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>Solicitar corrida para a transportadora</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>KL_FR_REQUEST_CARRIER_TRANSPORT</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_operation_type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Key Logistics For Rent Locksmith</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

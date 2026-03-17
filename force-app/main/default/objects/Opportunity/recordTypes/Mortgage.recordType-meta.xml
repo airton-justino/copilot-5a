@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mortgage</fullName>
+    <active>true</active>
+    <businessProcess>Mortgage</businessProcess>
+    <label>Mortgage</label>
+    <picklistValues>
+        <picklist>FS_BankChosen__c</picklist>
+        <values>
+            <fullName>Bradesco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caixa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Itaú</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nenhuma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santander</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FS_ClientResponse__c</picklist>
+        <values>
+            <fullName>Aguardar outro banco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banco escolhido</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financiamento externo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FS_ProceedWithQuintoAndar__c</picklist>
+        <values>
+            <fullName>Não</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Não decidiu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sim</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FS_paymentMethod__c</picklist>
+        <values>
+            <fullName>FINANCED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FINANCED_USING_FGTS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

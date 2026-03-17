@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContestationAnalysisEventType__c</fullName>
+    <label>Tipo de Evento de Análise de Contestação</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>create_offboarding_contestation_analysis</fullName>
+                <default>false</default>
+                <label>create_offboarding_contestation_analysis</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

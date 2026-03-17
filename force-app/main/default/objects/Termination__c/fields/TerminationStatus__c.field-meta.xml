@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TerminationStatus__c</fullName>
+    <label>Status da rescisão</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>REQUESTED</fullName>
+                <default>false</default>
+                <label>Solicitada</label>
+            </value>
+            <value>
+                <fullName>DONE</fullName>
+                <default>false</default>
+                <label>Finalizada</label>
+            </value>
+            <value>
+                <fullName>CANCELED</fullName>
+                <default>false</default>
+                <label>Cancelada</label>
+            </value>
+            <value>
+                <fullName>INSPECTION_SCHEDULED</fullName>
+                <default>false</default>
+                <label>Inspeção Agendada</label>
+            </value>
+            <value>
+                <fullName>INSPECTION_CANCELED</fullName>
+                <default>false</default>
+                <label>Inspeção Cancelada</label>
+            </value>
+            <value>
+                <fullName>INSPECTION_UNDER_REVIEW</fullName>
+                <default>false</default>
+                <label>Inspeção em Análise</label>
+            </value>
+            <value>
+                <fullName>INSPECTION_OPTED_OUT</fullName>
+                <default>false</default>
+                <label>Inspeção Dispensada</label>
+            </value>
+            <value>
+                <fullName>WAITING_INSPECTION_SCHEDULE</fullName>
+                <default>false</default>
+                <label>Aguardando Agendamento da Inspeção</label>
+            </value>
+            <value>
+                <fullName>WAITING_KEYS_LOCATION</fullName>
+                <default>false</default>
+                <label>Aguardando Localização das Chaves</label>
+            </value>
+            <value>
+                <fullName>INSPECTION_EXECUTED</fullName>
+                <default>false</default>
+                <label>Inspeção Realizada</label>
+            </value>
+            <value>
+                <fullName>WAITING_REPAIRS_FOLLOW_UP</fullName>
+                <default>false</default>
+                <label>Aguardando Acompanhamento dos Reparos</label>
+            </value>
+            <value>
+                <fullName>FINISHED</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>FINISHED</label>
+            </value>
+            <value>
+                <fullName>IN PROGRESS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IN PROGRESS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

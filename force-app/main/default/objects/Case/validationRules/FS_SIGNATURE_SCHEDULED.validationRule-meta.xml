@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_SIGNATURE_SCHEDULED</fullName>
+    <active>false</active>
+    <description>Preencha os campos: Data de agendamento e Modelo de assintura. Diligência precisa estar aceita.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(CRNStatus__c, &apos;SIGNATURE_SCHEDULED&apos;),
+NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)),
+ISPICKVAL(ForSaleFlow__c,&apos;CRN&apos;),
+OR(
+ISNULL(FS_PDSL_SubscriptionSchedulingDate__c),
+NOT(ISPICKVAL(PurchaseSaleContract__r.IsDiligenceAccepted__c, &apos;Sim&apos;)),
+ISNULL(TEXT(FS_SubscriptionModelBuyer__c)),
+ISNULL(TEXT(FS_SubscriptionModelSeller__c))))</errorConditionFormula>
+    <errorDisplayField>CRNStatus__c</errorDisplayField>
+    <errorMessage>Preencha os campos: Data de agendamento e Modelo de assintura. Diligência precisa estar aceita.</errorMessage>
+</ValidationRule>

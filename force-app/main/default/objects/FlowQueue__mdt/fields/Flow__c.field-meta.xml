@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flow__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Fluxo</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TT_Termination</fullName>
+                <default>true</default>
+                <label>Rescisão</label>
+            </value>
+            <value>
+                <fullName>RT_Retention</fullName>
+                <default>false</default>
+                <label>Retenção</label>
+            </value>
+            <value>
+                <fullName>FS_ForSale</fullName>
+                <default>false</default>
+                <label>ForSale</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

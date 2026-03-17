@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CurrentStage__c</fullName>
+    <description>Define at which stage the error was identified: Repair Analysis (RA) or Dispute Analysis (DA).</description>
+    <label>Qual etapa?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Análise de Reparos</fullName>
+                <default>false</default>
+                <label>Análise de Reparos</label>
+            </value>
+            <value>
+                <fullName>Análise de Contestação</fullName>
+                <default>false</default>
+                <label>Análise de Contestação</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

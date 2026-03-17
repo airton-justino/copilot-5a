@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaskType__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Task Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Coletar com PP tipo de prestador</fullName>
+                <default>true</default>
+                <label>Coletar com PP tipo de prestador</label>
+            </value>
+            <value>
+                <fullName>Contestação comunicar e revisar</fullName>
+                <default>false</default>
+                <label>Contestação comunicar e revisar</label>
+            </value>
+            <value>
+                <fullName>Comunicar resposta de processo ao IQ</fullName>
+                <default>false</default>
+                <label>Comunicar resposta de processo ao IQ</label>
+            </value>
+            <value>
+                <fullName>Aprovação de reembolso</fullName>
+                <default>false</default>
+                <label>Aprovação de reembolso</label>
+            </value>
+            <value>
+                <fullName>Criação de desconto na fatura</fullName>
+                <default>false</default>
+                <label>Criação de desconto na fatura</label>
+            </value>
+            <value>
+                <fullName>Solicita ao PP aprovação do orçamento</fullName>
+                <default>false</default>
+                <label>Solicita ao PP aprovação do orçamento</label>
+            </value>
+            <value>
+                <fullName>Comunica PP sobre falta de execução</fullName>
+                <default>false</default>
+                <label>Comunica PP sobre falta de execução</label>
+            </value>
+            <value>
+                <fullName>Coletar com IQ orçamentos</fullName>
+                <default>false</default>
+                <label>Coletar com IQ orçamentos</label>
+            </value>
+            <value>
+                <fullName>Solicita ao IQ envio de orçamentos</fullName>
+                <default>false</default>
+                <label>Solicita ao IQ envio de orçamentos</label>
+            </value>
+            <value>
+                <fullName>Registrar orçamento enviado pelo IQ</fullName>
+                <default>false</default>
+                <label>Registrar orçamento enviado pelo IQ</label>
+            </value>
+            <value>
+                <fullName>Confirmar com IQ finalização da execução</fullName>
+                <default>false</default>
+                <label>Confirmar com IQ finalização da execução</label>
+            </value>
+            <value>
+                <fullName>Comunicar PP quanto a execução do reparo</fullName>
+                <default>false</default>
+                <label>Comunicar PP quanto a execução do reparo</label>
+            </value>
+            <value>
+                <fullName>Verificar pagamentos para analisar multa</fullName>
+                <default>false</default>
+                <label>Verificar pagamentos para analisar multa</label>
+            </value>
+            <value>
+                <fullName>Solicitar envio de carta de trabalho</fullName>
+                <default>false</default>
+                <label>Solicitar envio de carta de trabalho</label>
+            </value>
+            <value>
+                <fullName>Analisar se carta é valida</fullName>
+                <default>false</default>
+                <label>Analisar se carta é valida</label>
+            </value>
+            <value>
+                <fullName>Verificar valores e responsabilidades no contrato</fullName>
+                <default>false</default>
+                <label>Verificar valores e responsabilidades no contrato</label>
+            </value>
+            <value>
+                <fullName>Checagem de cadastro</fullName>
+                <default>false</default>
+                <label>Checagem de cadastro</label>
+            </value>
+            <value>
+                <fullName>Checagem de CHAT PP:IQ</fullName>
+                <default>false</default>
+                <label>Checagem de CHAT PP:IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (call) com IQ: Onboarding IQ - Call</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (call) com IQ: Onboarding IQ - Call</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (call) com PP: Onboarding PP - Call</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (call) com PP: Onboarding PP - Call</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (chat) com IQ: Onboarding IQ - Chat</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (chat) com IQ: Onboarding IQ - Chat</label>
+            </value>
+            <value>
+                <fullName>Tarefa de FUP (chat) com IQ: Onboarding IQ - FUP CHAT</fullName>
+                <default>false</default>
+                <label>Tarefa de FUP (chat) com IQ: Onboarding IQ - FUP CHAT</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (chat) com PP: Onboarding PP - Chat</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (chat) com PP: Onboarding PP - Chat</label>
+            </value>
+            <value>
+                <fullName>Tarefa de FUP (chat) com PP: Onboarding PP - FUP CHAT</fullName>
+                <default>false</default>
+                <label>Tarefa de FUP (chat) com PP: Onboarding PP - FUP CHAT</label>
+            </value>
+            <value>
+                <fullName>Tarefa com contato: Orientação para vistoria</fullName>
+                <default>false</default>
+                <label>Tarefa com contato: Orientação para vistoria</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Verificar pendências - PP</fullName>
+                <default>false</default>
+                <label>Tarefa: Verificar pendências - PP</label>
+            </value>
+            <value>
+                <fullName>Tarefa com contato: Reforço de pagamentos e multa</fullName>
+                <default>false</default>
+                <label>Tarefa com contato: Reforço de pagamentos e multa</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Verificar pendências - IQ</fullName>
+                <default>false</default>
+                <label>Tarefa: Verificar pendências - IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa com contato: Orientação de pagamentos - PP</fullName>
+                <default>false</default>
+                <label>Tarefa com contato: Orientação de pagamentos - PP</label>
+            </value>
+            <value>
+                <fullName>Tarefa sem contato: Verificar reparos negociados - IQ</fullName>
+                <default>false</default>
+                <label>Tarefa sem contato: Verificar reparos negociados - IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa com contato: Reforço de reparos e benfeitorias - IQ</fullName>
+                <default>false</default>
+                <label>Tarefa com contato: Reforço de reparos e benfeitorias - IQ</label>
+            </value>
+            <value>
+                <fullName>Analista inclui a informação no caso do Salesforce</fullName>
+                <default>false</default>
+                <label>Analista inclui a informação no caso do Salesforce</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Verificar pagamentos</fullName>
+                <default>false</default>
+                <label>Tarefa: Verificar pagamentos</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Orientar PP e IQ sobre próximos passos pós vistoria</fullName>
+                <default>false</default>
+                <label>Tarefa: Orientar PP e IQ sobre próximos passos pós vistoria</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Análise de reparos - Atribuída a analista de laudos</fullName>
+                <default>false</default>
+                <label>Tarefa: Análise de reparos - Atribuída a analista de laudos</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (chat) com PP: Engajamento Laudo - PP</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (chat) com PP: Engajamento Laudo - PP</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (chat) com IQ: Engajamento Laudo - IQ</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (chat) com IQ: Engajamento Laudo - IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Análise de contestação</fullName>
+                <default>false</default>
+                <label>Tarefa: Análise de contestação</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Check-out + Aviso de encerramento - IQ</fullName>
+                <default>false</default>
+                <label>Tarefa: Check-out + Aviso de encerramento - IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Check-out + Aviso de encerramento - PP</fullName>
+                <default>false</default>
+                <label>Tarefa: Check-out + Aviso de encerramento - PP</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (chat) com PP: Engajamento Budget Approval - PP</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (chat) com PP: Engajamento Budget Approval - PP</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (chat) com IQ: Engajamento Budget Approval - IQ</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (chat) com IQ: Engajamento Budget Approval - IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa interna: Lançar pagamentos no PayFaturas</fullName>
+                <default>false</default>
+                <label>Tarefa interna: Lançar pagamentos no PayFaturas</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato: Negociação + Cobrança IQ</fullName>
+                <default>false</default>
+                <label>Tarefa de contato: Negociação + Cobrança IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato: Negociação + Pagamento PP</fullName>
+                <default>false</default>
+                <label>Tarefa de contato: Negociação + Pagamento PP</label>
+            </value>
+            <value>
+                <fullName>Tarefa interna: Realizar TF manual</fullName>
+                <default>false</default>
+                <label>Tarefa interna: Realizar TF manual</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Finalização oficial da assessoria - IQ</fullName>
+                <default>false</default>
+                <label>Tarefa: Finalização oficial da assessoria - IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Finalização oficial da assessoria - PP</fullName>
+                <default>false</default>
+                <label>Tarefa: Finalização oficial da assessoria - PP</label>
+            </value>
+            <value>
+                <fullName>Anotar motivo de despublicação no caso do SF</fullName>
+                <default>false</default>
+                <label>Anotar motivo de despublicação no caso do SF</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (Call) com PP: Retenção PP</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (Call) com PP: Retenção PP</label>
+            </value>
+            <value>
+                <fullName>Tarefa do sistema: Verificar pendências - IQ</fullName>
+                <default>false</default>
+                <label>Tarefa do sistema: Verificar pendências - IQ</label>
+            </value>
+            <value>
+                <fullName>Tarefa do sistema: Verificar pendências - PP</fullName>
+                <default>false</default>
+                <label>Tarefa do sistema: Verificar pendências - PP</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Retenção PP É criada para agente</fullName>
+                <default>false</default>
+                <label>Tarefa: Retenção PP É criada para agente</label>
+            </value>
+            <value>
+                <fullName>Tarefa de contato (chat) com PP: Retenção PP - Chat</fullName>
+                <default>false</default>
+                <label>Tarefa de contato (chat) com PP: Retenção PP - Chat</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_BY_MAKE_FIRST_CONTACT</fullName>
+                <default>false</default>
+                <label>FS_ONB_BY_MAKE_FIRST_CONTACT</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_BY_FORMALIZE_ONB_CONTACT_WPP</fullName>
+                <default>false</default>
+                <label>FS_ONB_BY_FORMALIZE_ONB_CONTACT_WPP</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_BY_SEND_WPP_REQ_TIME_ONB</fullName>
+                <default>false</default>
+                <label>FS_ONB_BY_SEND_WPP_REQ_TIME_ONB</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_BY_MAKE_SECOND_CONTACT_ONB</fullName>
+                <default>false</default>
+                <label>FS_ONB_BY_MAKE_SECOND_CONTACT_ONB</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_BY_MAKE_THIRD_CONTACT</fullName>
+                <default>false</default>
+                <label>FS_ONB_BY_MAKE_THIRD_CONTACT</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_BY_SEND_EMAIL_FORMALIZING_ONB</fullName>
+                <default>false</default>
+                <label>FS_ONB_BY_SEND_EMAIL_FORMALIZING_ONB</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_SL_MAKE_FIRST_CONTACT_ONB</fullName>
+                <default>false</default>
+                <label>FS_ONB_SL_MAKE_FIRST_CONTACT_ONB</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_SL_FORMALIZE_ONB_CONTACT_WPP</fullName>
+                <default>false</default>
+                <label>FS_ONB_SL_FORMALIZE_ONB_CONTACT_WPP</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_SL_SEND_WPP_REQ_TIME_ONB</fullName>
+                <default>false</default>
+                <label>FS_ONB_SL_SEND_WPP_REQ_TIME_ONB</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_SL_MAKE_SECOND_CONTACT_ONB</fullName>
+                <default>false</default>
+                <label>FS_ONB_SL_MAKE_SECOND_CONTACT_ONB</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_SL_MAKE_THIRD_CONTACT_ONB</fullName>
+                <default>false</default>
+                <label>FS_ONB_SL_MAKE_THIRD_CONTACT_ONB</label>
+            </value>
+            <value>
+                <fullName>FS_ONB_SL_SEND_EMAIL_FORMALIZING_ONB</fullName>
+                <default>false</default>
+                <label>FS_ONB_SL_SEND_EMAIL_FORMALIZING_ONB</label>
+            </value>
+            <value>
+                <fullName>FS_PDS_SL_COMMUNICATE_BROKERAGE_PAID_ONB_END_PROCESS</fullName>
+                <default>false</default>
+                <label>FS_PDS_SL_COMMUNICATE_BROKERAGE_PAID_ONB_END_PROCESS</label>
+            </value>
+            <value>
+                <fullName>FS_PDS_BY_CHECK_BY_DEPOSIT_PAID</fullName>
+                <default>false</default>
+                <label>FS_PDS_BY_CHECK_BY_DEPOSIT_PAID</label>
+            </value>
+            <value>
+                <fullName>FS_PDS_BY_CHARGE_BY_DEPOSIT_PAYMENT</fullName>
+                <default>false</default>
+                <label>FS_PDS_BY_CHARGE_BY_DEPOSIT_PAYMENT</label>
+            </value>
+            <value>
+                <fullName>FS_PDS_FILL_COGNITO_FINANCE</fullName>
+                <default>false</default>
+                <label>FS_PDS_FILL_COGNITO_FINANCE</label>
+            </value>
+            <value>
+                <fullName>FS_PDS_SL_INFORM_SL_BY_PAID_DEPOSIT_PAYMENT_QUINTOANDAR</fullName>
+                <default>false</default>
+                <label>FS_PDS_SL_INFORM_SL_BY_PAID_DEPOSIT_PAYMENT_QUINTOANDAR</label>
+            </value>
+            <value>
+                <fullName>Tarefa: Orientar IQ sobre próximos passos pós vistoria</fullName>
+                <default>false</default>
+                <label>Tarefa: Orientar IQ sobre próximos passos pós vistoria</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

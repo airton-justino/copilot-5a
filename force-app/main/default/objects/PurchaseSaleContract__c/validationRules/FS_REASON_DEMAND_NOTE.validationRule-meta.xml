@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_REASON_DEMAND_NOTE</fullName>
+    <active>true</active>
+    <description>Preencha os motivos de nota de exigência quando o campo de nota de exigência for igual a SIM.</description>
+    <errorConditionFormula>AND(
+CONTAINS($Profile.Name, &quot;CRN&quot;),
+TEXT(CRI_HaveDemandNote__c) = &apos;Sim&apos;, 
+TEXT(HaveDemandNoteReason__c) = &apos;&apos;
+)</errorConditionFormula>
+    <errorMessage>Preencha os motivos de nota de exigência quando o campo de nota de exigência for igual a SIM.</errorMessage>
+</ValidationRule>

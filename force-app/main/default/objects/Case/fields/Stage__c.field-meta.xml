@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <label>Fase</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CustomerContact</fullName>
+                <default>false</default>
+                <label>Contato com clientes</label>
+            </value>
+            <value>
+                <fullName>RideLocksmith</fullName>
+                <default>false</default>
+                <label>Corrida/Chaveiro</label>
+            </value>
+            <value>
+                <fullName>ClosedWon</fullName>
+                <default>false</default>
+                <label>Concluído com Sucesso</label>
+            </value>
+            <value>
+                <fullName>ClosedLost</fullName>
+                <default>false</default>
+                <label>Concluído sem Sucesso</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

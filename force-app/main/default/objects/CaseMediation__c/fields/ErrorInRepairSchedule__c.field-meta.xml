@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ErrorInRepairSchedule__c</fullName>
+    <description>Identify if there were any technical inconsistencies or errors in filling out the report.</description>
+    <label>Erro na tabela de reparos?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>NullableCheckbox</valueSetName>
+    </valueSet>
+</CustomField>

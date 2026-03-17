@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ForSaleQueueBack_PurchaseSaleContract</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Fila de ForSale - Back</label>
+    <queue>ForSaleQueueBack</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

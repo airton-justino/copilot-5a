@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimaryTenantoftheCustomerService__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Inquilino Principal do Atendimento</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>CaseMember__c.Case__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Id</valueField>
+        </filterItems>
+        <filterItems>
+            <field>CaseMember__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Tenant</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>CaseMember__c</referenceTo>
+    <relationshipLabel>Casos (Inquilino Principal do Atendimento)</relationshipLabel>
+    <relationshipName>CaseTenant</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

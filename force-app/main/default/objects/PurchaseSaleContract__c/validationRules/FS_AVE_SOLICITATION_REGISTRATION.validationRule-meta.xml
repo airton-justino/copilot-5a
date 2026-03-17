@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_AVE_SOLICITATION_REGISTRATION</fullName>
+    <active>true</active>
+    <description>Para atribuir este status é imprescindível a atribuição do PROTOCOLO e a DATA DE SOLICITAÇÃO da Averbação.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(FS_EndorsementStatusCCV__c, &apos;Solicitada&apos;),
+OR(
+ISBLANK(FS_AVE_ProtocolCCV__c),
+ISBLANK(FS_Endorsement_RequestDateCCV__c)),
+CONTAINS($Profile.Name, &quot;CRN&quot;))</errorConditionFormula>
+    <errorMessage>Para atribuir este status é imprescindível a atribuição do PROTOCOLO e a DATA DE SOLICITAÇÃO da Averbação.</errorMessage>
+</ValidationRule>

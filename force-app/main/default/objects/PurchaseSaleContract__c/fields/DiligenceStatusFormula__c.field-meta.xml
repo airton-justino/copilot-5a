@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DiligenceStatusFormula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    OR(
+        ISPICKVAL(DiligenceStatus__c, &apos;LONG_TERM_PAYMENT&apos;),
+        ISPICKVAL(DiligenceStatus__c, &apos;REQUEST_DD_LEGAL_RISK&apos;),
+        ISPICKVAL(DiligenceStatus__c, &apos;PENDING&apos;),
+        ISPICKVAL(DiligenceStatus__c, &apos;DOC_AVAILABLE&apos;),
+        ISPICKVAL(DiligenceStatus__c, &apos;REPORT_UNDER_PREPARATION&apos;),
+        ISPICKVAL(DiligenceStatus__c, &apos;REPORT_AVAILABLE&apos;),
+        ISPICKVAL(DiligenceStatus__c, &apos;PROCESSING&apos;)
+    ),
+    &apos;Em Andamento&apos;,
+    IF(
+        ISPICKVAL(DiligenceStatus__c, &apos;NOT_STARTED&apos;),
+        &apos;Não Iniciada&apos;,
+        IF(
+            ISPICKVAL(DiligenceStatus__c, &apos;REPORT_SENT_SELLER&apos;),
+            &apos;Relatório Enviado Para Vendedor (Não Informar Comprador)&apos;,
+            IF(
+                ISPICKVAL(DiligenceStatus__c, &apos;REPORT_SENT_BUYER&apos;),
+                &apos;Relatório Enviado Para Comprador&apos;,
+                IF(
+                    OR(
+                        ISBLANK(TEXT(DiligenceStatus__c)),
+                        ISNULL(TEXT(DiligenceStatus__c))
+                    ),
+                    &apos;&apos;,
+                    &apos;Valor não esperado&apos;
+                )
+            )
+        )
+    )
+)</formula>
+    <label>Relatório da Diligência</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

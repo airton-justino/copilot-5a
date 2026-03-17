@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CityPropertyAllowsIssueITBI__c</fullName>
+    <label>Cidade do Imóvel Permite 5A Emitir ITBI?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Barueri</fullName>
+                <default>false</default>
+                <label>Barueri</label>
+            </value>
+            <value>
+                <fullName>Diadema</fullName>
+                <default>false</default>
+                <label>Diadema</label>
+            </value>
+            <value>
+                <fullName>Guarulhos</fullName>
+                <default>false</default>
+                <label>Guarulhos</label>
+            </value>
+            <value>
+                <fullName>Niterói</fullName>
+                <default>false</default>
+                <label>Niterói</label>
+            </value>
+            <value>
+                <fullName>Novo Hamburgo</fullName>
+                <default>false</default>
+                <label>Novo Hamburgo</label>
+            </value>
+            <value>
+                <fullName>Osasco</fullName>
+                <default>false</default>
+                <label>Osasco</label>
+            </value>
+            <value>
+                <fullName>Rio de Janeiro</fullName>
+                <default>false</default>
+                <label>Rio de Janeiro</label>
+            </value>
+            <value>
+                <fullName>São Bernardo do Campo</fullName>
+                <default>false</default>
+                <label>São Bernardo do Campo</label>
+            </value>
+            <value>
+                <fullName>São Paulo</fullName>
+                <default>false</default>
+                <label>São Paulo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

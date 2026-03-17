@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SLCurrentOnboardingContact__c</fullName>
+    <label>[SL] Contato Atual do Onboarding</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FIRST_CONTACT</fullName>
+                <default>false</default>
+                <label>Primeiro Contato</label>
+            </value>
+            <value>
+                <fullName>SECOND_CONTACT</fullName>
+                <default>false</default>
+                <label>Segundo Contato</label>
+            </value>
+            <value>
+                <fullName>THIRD_CONTACT</fullName>
+                <default>false</default>
+                <label>Terceiro Contato</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

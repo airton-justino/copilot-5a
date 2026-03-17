@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaymentMethod__c</fullName>
+    <label>Método de Pagamento</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CASH</fullName>
+                <default>false</default>
+                <label>À Vista</label>
+            </value>
+            <value>
+                <fullName>CASH USING FGTS</fullName>
+                <default>false</default>
+                <label>À Vista com FGTS</label>
+            </value>
+            <value>
+                <fullName>FINANCED</fullName>
+                <default>false</default>
+                <label>Financiado</label>
+            </value>
+            <value>
+                <fullName>FINANCED USING FGTS</fullName>
+                <default>false</default>
+                <label>Financiado com FGTS</label>
+            </value>
+            <value>
+                <fullName>FINANCED_USING_THIRD_COMPANY</fullName>
+                <default>false</default>
+                <label>Consórcio</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

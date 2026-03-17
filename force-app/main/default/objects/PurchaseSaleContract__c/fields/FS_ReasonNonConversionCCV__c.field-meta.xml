@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_ReasonNonConversionCCV__c</fullName>
+    <label>Motivos da não-conversão</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Comprador não retornou aos contatos</fullName>
+                <default>false</default>
+                <label>Comprador não retornou aos contatos</label>
+            </value>
+            <value>
+                <fullName>Comprador não quis seguir com os valores do CCV</fullName>
+                <default>false</default>
+                <label>Comprador não quis seguir com os valores do CCV</label>
+            </value>
+            <value>
+                <fullName>Distância do cartório</fullName>
+                <default>false</default>
+                <label>Distância do cartório</label>
+            </value>
+            <value>
+                <fullName>Distrato</fullName>
+                <default>false</default>
+                <label>Distrato</label>
+            </value>
+            <value>
+                <fullName>Indicação de EN a outro CRN</fullName>
+                <default>false</default>
+                <label>Indicação de EN a outro CRN</label>
+            </value>
+            <value>
+                <fullName>Preferência por cartório de confiança</fullName>
+                <default>false</default>
+                <label>Preferência por cartório de confiança</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

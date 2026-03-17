@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_Bookkeeping_Done_Date</fullName>
+    <active>true</active>
+    <description>Regra de validação para quando status do CRN for &quot;Escritura assinada&quot;, obrigatório colocar a Data de finalização da Escrituração</description>
+    <errorConditionFormula>AND(
+CONTAINS($Profile.Name, &quot;CRN&quot;),
+TEXT(CRNStatus__c) = &apos;DEED_SIGNED&apos;,
+ISBLANK(BookkeepingDoneDateCCV__c) 
+)</errorConditionFormula>
+    <errorDisplayField>BookkeepingDoneDateCCV__c</errorDisplayField>
+    <errorMessage>Caso o Status do CRN for Escritura assinada, preencha a Data da finalização da escrituração.</errorMessage>
+</ValidationRule>

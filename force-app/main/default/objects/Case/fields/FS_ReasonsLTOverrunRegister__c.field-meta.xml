@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_ReasonsLTOverrunRegister__c</fullName>
+    <label>Motivos do estouro de LT de Registro</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N.E Adequação de documento para PDF/A</fullName>
+                <default>false</default>
+                <label>N.E Adequação de documento para PDF/A</label>
+            </value>
+            <value>
+                <fullName>N.E Rerratificação da escritura</fullName>
+                <default>false</default>
+                <label>N.E Rerratificação da escritura</label>
+            </value>
+            <value>
+                <fullName>N.E Termo de Quitação</fullName>
+                <default>false</default>
+                <label>N.E Termo de Quitação</label>
+            </value>
+            <value>
+                <fullName>N.E Procuração de TQ</fullName>
+                <default>false</default>
+                <label>N.E Procuração de TQ</label>
+            </value>
+            <value>
+                <fullName>N.E Atualização de Casamento BY</fullName>
+                <default>false</default>
+                <label>N.E Atualização de Casamento BY</label>
+            </value>
+            <value>
+                <fullName>N.E Atualização de Casamento SL</fullName>
+                <default>false</default>
+                <label>N.E Atualização de Casamento SL</label>
+            </value>
+            <value>
+                <fullName>N.E Atualização de União Estável BY</fullName>
+                <default>false</default>
+                <label>N.E Atualização de União Estável BY</label>
+            </value>
+            <value>
+                <fullName>N.E Atualização de União Estável SL</fullName>
+                <default>false</default>
+                <label>N.E Atualização de União Estável SL</label>
+            </value>
+            <value>
+                <fullName>N.E Registro de pacto antenupcial BY</fullName>
+                <default>false</default>
+                <label>N.E Registro de pacto antenupcial BY</label>
+            </value>
+            <value>
+                <fullName>N.E Registro de pacto antenupcial SL</fullName>
+                <default>false</default>
+                <label>N.E Registro de pacto antenupcial SL</label>
+            </value>
+            <value>
+                <fullName>N.E Documentos pessoais SL</fullName>
+                <default>false</default>
+                <label>N.E Documentos pessoais SL</label>
+            </value>
+            <value>
+                <fullName>N.E Documentos pessoais BY</fullName>
+                <default>false</default>
+                <label>N.E Documentos pessoais BY</label>
+            </value>
+            <value>
+                <fullName>N.E Atualização de dados do imóvel</fullName>
+                <default>false</default>
+                <label>N.E Atualização de dados do imóvel</label>
+            </value>
+            <value>
+                <fullName>N.E HIS/HMP</fullName>
+                <default>false</default>
+                <label>N.E HIS/HMP</label>
+            </value>
+            <value>
+                <fullName>N.E ITBI</fullName>
+                <default>false</default>
+                <label>N.E ITBI</label>
+            </value>
+            <value>
+                <fullName>Demora no pagamento das custas por BY</fullName>
+                <default>false</default>
+                <label>Demora no pagamento das custas por BY</label>
+            </value>
+            <value>
+                <fullName>Demora no pagamento das custas por SL</fullName>
+                <default>false</default>
+                <label>Demora no pagamento das custas por SL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

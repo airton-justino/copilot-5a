@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <constants>
+        <name>CantDeleteTask</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Não é possível excluir a tarefa</stringValue>
+        </value>
+    </constants>
+    <customErrors>
+        <name>BlockDeletionMessage</name>
+        <label>Mensagem de Bloqueio da Deleção</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>{!CantDeleteTask}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>VerifyProfileAndRecordType</name>
+        <label>Verificar Perfil e Tipo de Registro</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>BlockDeletion</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Profile.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Agent</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TT_Termination</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>RT_Retention</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>BlockDeletionMessage</targetReference>
+            </connector>
+            <label>Bloquear Deleção</label>
+        </rules>
+    </decisions>
+    <description>Usuários com o perfil de Agente não podem deletar tarefas de Rescisão ou Retenção</description>
+    <environments>Default</environments>
+    <interviewLabel>[Task] Bloquear Deleção da Tarefa {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Task] Bloquear Deleção da Tarefa</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>VerifyProfileAndRecordType</targetReference>
+        </connector>
+        <object>Task</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

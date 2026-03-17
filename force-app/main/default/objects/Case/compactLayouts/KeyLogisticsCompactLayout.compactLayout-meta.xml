@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KeyLogisticsCompactLayout</fullName>
+    <fields>Subject</fields>
+    <fields>CaseNumber</fields>
+    <fields>KeyLocation__c</fields>
+    <fields>PriorityLighthouse__c</fields>
+    <fields>CriticalitySla__c</fields>
+    <fields>PropertyNumber__c</fields>
+    <fields>Analyst__c</fields>
+    <fields>ContractId__c</fields>
+    <label>Key Logistics Compact Layout</label>
+</CompactLayout>

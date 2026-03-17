@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsOwnerDisagreeWithResponsibility__c</fullName>
+    <description>Identify whether the impasse concerns attributing the damage to the tenant.</description>
+    <label>Discordância de responsabilidade pelo PP</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>NullableCheckbox</valueSetName>
+    </valueSet>
+</CustomField>

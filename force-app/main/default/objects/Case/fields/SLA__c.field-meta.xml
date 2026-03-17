@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SLA__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+    SLALighthouse__c,
+    &quot;WithinTheDeadline&quot;, &quot;🟢&quot;,
+    &quot;DueDateApproaching&quot;, &quot;🟡&quot;,
+    &quot;Expired&quot;, &quot;🔴&quot;,
+    &quot;⚪&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SLA</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

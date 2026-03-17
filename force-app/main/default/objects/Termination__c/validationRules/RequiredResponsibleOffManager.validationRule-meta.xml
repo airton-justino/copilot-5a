@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequiredResponsibleOffManager</fullName>
+    <active>true</active>
+    <description>ResponsibleOffManager__c is mandatory</description>
+    <errorConditionFormula>AND(IsSpoc__c, ISBLANK(ResponsibleOffManager__c))</errorConditionFormula>
+    <errorMessage>Error: ResponsibleOffManager__c is blank</errorMessage>
+</ValidationRule>

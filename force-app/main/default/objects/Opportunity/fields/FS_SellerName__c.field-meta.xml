@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_SellerName__c</fullName>
+    <externalId>false</externalId>
+    <formula>Seller__r.PersonContact.FirstName &amp; &quot; &quot; &amp; Seller__r.PersonContact.LastName</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Nome do Seller</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

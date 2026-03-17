@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequiredContract</fullName>
+    <active>true</active>
+    <description>Contract__c is mandatory</description>
+    <errorConditionFormula>ISBLANK(Contract__c)</errorConditionFormula>
+    <errorMessage>Error: Contract__c is blank</errorMessage>
+</ValidationRule>

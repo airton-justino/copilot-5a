@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_BALANCE_PAYMENT</fullName>
+    <active>true</active>
+    <description>Para finalizar essa tarefa é indispensável a atribuição do seguinte campo: Pagamento do Saldo Realizado?</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)),
+ISPICKVAL(FS_BalancePaymentMade__c, &apos;&apos;),
+ISPICKVAL(CRNStatus__c, &apos;DEED_SIGNED&apos;))</errorConditionFormula>
+    <errorDisplayField>FS_BalancePaymentMade__c</errorDisplayField>
+    <errorMessage>Para finalizar essa tarefa é indispensável a atribuição do seguinte campo: Pagamento do Saldo Realizado?</errorMessage>
+</ValidationRule>

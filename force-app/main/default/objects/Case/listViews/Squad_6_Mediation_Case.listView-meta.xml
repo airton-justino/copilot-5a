@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Squad_6_Mediation_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Squad 6 - Mediação</label>
+    <queue>Squad_6_Mediation</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

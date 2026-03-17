@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OwnerCallLink__c</fullName>
+    <description>Link to the call recording stored on Twilio for auditing purposes.</description>
+    <externalId>false</externalId>
+    <label>Link da ligação proprietário</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

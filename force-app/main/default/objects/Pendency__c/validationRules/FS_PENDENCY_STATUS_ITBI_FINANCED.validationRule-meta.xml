@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_PENDENCY_STATUS_ITBI_FINANCED</fullName>
+    <active>true</active>
+    <description>Para concluir a solicitação é imprescindível ANEXAR A GUIA DO ITBI e informar a DATA DE VENCIMENTO DO BOLETO.</description>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(PendencyType__c, &apos;Emissão&apos;),
+ISPICKVAL(PendencyType__c, &apos;Reemissão&apos;)),
+NOT(
+CONTAINS(
+LOWER($Profile.Name),
+&quot;admin&quot;)), 
+ISPICKVAL(Status__c, &apos;Concluída&apos;),
+ITBIGuide__c = False,
+ISBLANK(BillExpirationDate__c))</errorConditionFormula>
+    <errorMessage>Para concluir a solicitação é imprescindível ANEXAR A GUIA DO ITBI e informar a DATA DE VENCIMENTO DO BOLETO.</errorMessage>
+</ValidationRule>

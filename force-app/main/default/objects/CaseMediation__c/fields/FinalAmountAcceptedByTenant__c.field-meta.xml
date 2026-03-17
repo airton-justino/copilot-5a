@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinalAmountAcceptedByTenant__c</fullName>
+    <description>Phase Trigger: Whether you fill in &quot;Yes&quot; or &quot;No&quot;, the case proceeds to the Payment Phase.</description>
+    <label>Valor final aceito pelo inquilino?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>NullableCheckbox</valueSetName>
+    </valueSet>
+</CustomField>

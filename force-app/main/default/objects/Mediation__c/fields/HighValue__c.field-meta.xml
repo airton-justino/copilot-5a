@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HighValue__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  ISPICKVAL(ContractLookup__r.value_segment__c, &quot;high&quot;),
+  &quot;Sim&quot;,
+  &quot;Não&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>High Value</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

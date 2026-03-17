@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_CRN_CANCELED_STATUS</fullName>
+    <active>true</active>
+    <description>Você não pode atribuir essa opção.</description>
+    <errorConditionFormula>AND(
+NOT(
+CONTAINS(
+LOWER($Profile.Name),
+&quot;admin&quot;)),
+
+NOT(ISPICKVAL(CCVStatus__c, &apos;CANCELED&apos;)), 
+
+ISCHANGED(CRNStatus__c),
+ISPICKVAL(CRNStatus__c,&apos;CANCELED&apos;))</errorConditionFormula>
+    <errorDisplayField>CRNStatus__c</errorDisplayField>
+    <errorMessage>Você não pode atribuir essa opção.</errorMessage>
+</ValidationRule>

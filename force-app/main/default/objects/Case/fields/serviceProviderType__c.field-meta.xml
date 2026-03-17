@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>serviceProviderType__c</fullName>
+    <label>Tipo de prestador de serviço</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OWNER_PROVIDER</fullName>
+                <default>false</default>
+                <label>Prestador de serviço indicado pelo proprietário</label>
+            </value>
+            <value>
+                <fullName>TENANT_PROVIDER_WITH_OWNER_APPROVAL</fullName>
+                <default>false</default>
+                <label>Prestador indicado pelo inquilino com aprovação do Proprietário</label>
+            </value>
+            <value>
+                <fullName>TENANT_PROVIDER_WITHOUT_OWNER_APPROVAL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prestador indicado pelo inquilino (compulsório) sem aprovação do Proprietário</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

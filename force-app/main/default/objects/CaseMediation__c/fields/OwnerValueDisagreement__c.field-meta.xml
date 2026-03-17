@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OwnerValueDisagreement__c</fullName>
+    <description>Identify whether the owner&apos;s dispute relates to the amount charged by IQ.</description>
+    <label>Discordância de valor pelo proprietário?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>NullableCheckbox</valueSetName>
+    </valueSet>
+</CustomField>

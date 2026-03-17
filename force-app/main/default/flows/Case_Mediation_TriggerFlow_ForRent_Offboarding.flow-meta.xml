@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>AssignOwnerToMediationRoutingQueue</name>
+        <label>Assign owner to mediation routing queue</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetMediationRoutingQueue.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>AssignStatusToContextAndFirstContact</name>
+        <label>Assign status to Context and First Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Context &amp; First Contact</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>AssignStatusToPayment</name>
+        <label>Assign status to Payment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Payment</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>AssignStatusToRenegotiation</name>
+        <label>Assign status to Renegotiation</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Renegotiation</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>HasMediationRoutingQueue</name>
+        <label>Has mediation routing queue?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>QueueFound</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GetMediationRoutingQueue.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignOwnerToMediationRoutingQueue</targetReference>
+            </connector>
+            <label>Queue found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>IsCreationOrUpdate</name>
+        <label>Is it create or update?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No match</defaultConnectorLabel>
+        <rules>
+            <name>IsCreation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GetMediationRoutingQueue</targetReference>
+            </connector>
+            <label>New record</label>
+        </rules>
+        <rules>
+            <name>IsUpdate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IsOwnerChangedFromQueueToUser</targetReference>
+            </connector>
+            <label>Update</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>IsOwnerChangedFromQueueToUser</name>
+        <label>Owner changed from queue to user?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>IsRenegotiationNeededInContextFirstContact</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesOwnerChangedFromQueueToUser</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.OwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>00G</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>005</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Context &amp; First Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignStatusToContextAndFirstContact</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>IsRenegotiationNeededInContextFirstContact</name>
+        <label>Renegotiation needed in Context and First Contact?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>MoveToPayment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Context &amp; First Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MediationCase__r.IsRenegotiationWithClientNeeded__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>false</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignStatusToPayment</targetReference>
+            </connector>
+            <label>No renegotiation needed</label>
+        </rules>
+        <rules>
+            <name>MoveToRenegotiation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Context &amp; First Contact</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MediationCase__r.IsRenegotiationWithClientNeeded__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>true</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignStatusToRenegotiation</targetReference>
+            </connector>
+            <label>Renegotiation needed</label>
+        </rules>
+    </decisions>
+    <description>General flow for Mediation ForRent - Offboarding</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>MediationRoutingQueueDeveloperName</name>
+        <dataType>String</dataType>
+        <expression>IF(
+{!$Record.Mediation__r.isEviction__c},
+&quot;Squad_7_Mediation&quot;,
+IF(
+{!$Record.Mediation__r.isPpMulti__c},
+&quot;Squad_5_Mediation&quot;,
+IF(
+{!$Record.Mediation__r.isHighValue__c},
+&quot;Squad_6_Mediation&quot;,
+IF(
+{!$Record.Mediation__r.IsUndefinedItem__c},
+&quot;Squad_4_Mediation&quot;,
+IF(
+TEXT({!$Record.Type}) = &quot;Mediation Owner Approved&quot;,
+&quot;Squad_2_Mediation&quot;,
+IF(
+TEXT({!$Record.Type}) = &quot;Mediation Tenant Approved&quot;,
+&quot;Squad_3_Mediation&quot;,
+&quot;Squad_4_Mediation&quot;
+)
+)
+)
+)
+)
+)</expression>
+    </formulas>
+    <interviewLabel>Case_TriggerFlow_Mediation_ {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case | Mediation | TriggerFlow -  ForRent - Offboarding</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GetMediationRoutingQueue</name>
+        <label>Get mediation routing queue</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>HasMediationRoutingQueue</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>MediationRoutingQueueDeveloperName</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Queue</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>IsCreationOrUpdate</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.DeveloperName} = &apos;Mediation&apos;</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

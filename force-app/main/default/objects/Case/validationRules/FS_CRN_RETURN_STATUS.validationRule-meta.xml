@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_CRN_RETURN_STATUS</fullName>
+    <active>false</active>
+    <description>Você não tem permissão para retroceder o status. Apenas avançar no fluxo.</description>
+    <errorConditionFormula>AND(
+    CONTAINS($Profile.Name, &quot;CRN&quot;),
+    
+    /* Mapeia o novo status para um número */
+    CASE(TEXT(CRNStatus__c),
+        &quot;NOT_STARTED&quot;, 1,
+        &quot;DRAFT_IN_PREPARATION&quot;, 2,
+        &quot;DRAFT_SENT_UNDER_APPROVAL&quot;, 3,
+        &quot;DRAFT_APPROVED&quot;, 4,
+        &quot;AWAITING_DD_ACCEPTANCE&quot;, 5,
+        &quot;SIGNATURE_SCHEDULED&quot;, 6,
+        &quot;DEED_SIGNED&quot;, 7,
+        0
+    ) &lt;
+
+    /* Mapeia o status anterior para um número */
+    CASE(TEXT(PRIORVALUE(CRNStatus__c)),
+        &quot;NOT_STARTED&quot;, 1,
+        &quot;DRAFT_IN_PREPARATION&quot;, 2,
+        &quot;DRAFT_SENT_UNDER_APPROVAL&quot;, 3,
+        &quot;DRAFT_APPROVED&quot;, 4,
+        &quot;AWAITING_DD_ACCEPTANCE&quot;, 5,
+        &quot;SIGNATURE_SCHEDULED&quot;, 6,
+        &quot;DEED_SIGNED&quot;, 7,
+        0
+    )
+)</errorConditionFormula>
+    <errorDisplayField>CRNStatus__c</errorDisplayField>
+    <errorMessage>Você não tem permissão para retroceder o status. Apenas avançar no fluxo.</errorMessage>
+</ValidationRule>

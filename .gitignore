@@ -1,0 +1,41 @@
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Salesforce CLI local state
+.sfdx/
+.sf/
+
+# Logs
+*.log
+
+# OS / temp
+.DS_Store
+Thumbs.db
+
+# Node / package managers
+node_modules/
+
+# Test and coverage
+coverage/
+.nyc_output/
+
+# Salesforce metadata temp / backups
+*.dup
+*.bak
+*.tmp
+
+# Java / Apex tooling temp
+.out/
+target/
+
+# Env / secrets
+.env
+.env.*
+
+# Optional: local auth or exported files
+*.zip
+*.vsix

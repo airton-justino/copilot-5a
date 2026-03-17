@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel__c</fullName>
+    <label>Canal</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>INSPECTION_APP</fullName>
+                <default>false</default>
+                <label>Aplicativo de Inspeção</label>
+            </value>
+            <value>
+                <fullName>OWNER_PWA</fullName>
+                <default>false</default>
+                <label>PWA do Proprietário</label>
+            </value>
+            <value>
+                <fullName>OWNER_NATIVE</fullName>
+                <default>false</default>
+                <label>OWNER_NATIVE</label>
+            </value>
+            <value>
+                <fullName>TENANT_PWA</fullName>
+                <default>false</default>
+                <label>PWA do Inquilino</label>
+            </value>
+            <value>
+                <fullName>TENANT_NATIVE</fullName>
+                <default>false</default>
+                <label>TENANT_NATIVE</label>
+            </value>
+            <value>
+                <fullName>AGENT_PWA</fullName>
+                <default>false</default>
+                <label>PWA do Agente</label>
+            </value>
+            <value>
+                <fullName>MAGIC_LINK</fullName>
+                <default>false</default>
+                <label>MagicLink</label>
+            </value>
+            <value>
+                <fullName>PORTFOLIO_MANAGER</fullName>
+                <default>false</default>
+                <label>Gerenciador de Portfólio</label>
+            </value>
+            <value>
+                <fullName>PHOTOS_PWA</fullName>
+                <default>false</default>
+                <label>PWA de Fotos</label>
+            </value>
+            <value>
+                <fullName>SYSTEM</fullName>
+                <default>false</default>
+                <label>Sistema</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

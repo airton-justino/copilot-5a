@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RelatedQuestion__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Pergunta Relacionada</label>
+    <referenceTo>DynamicForm__c</referenceTo>
+    <relationshipLabel>Registros Relacionados da Pergunta</relationshipLabel>
+    <relationshipName>Registros_Relacionados_Pergunta</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

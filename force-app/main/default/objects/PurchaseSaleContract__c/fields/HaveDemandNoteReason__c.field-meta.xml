@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HaveDemandNoteReason__c</fullName>
+    <label>Motivo de Nota de Exigência</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adequação de documento para PDF/A</fullName>
+                <default>false</default>
+                <label>Adequação de documento para PDF/A</label>
+            </value>
+            <value>
+                <fullName>Rerratificação da escritura</fullName>
+                <default>false</default>
+                <label>Rerratificação da escritura</label>
+            </value>
+            <value>
+                <fullName>Termo de Quitação</fullName>
+                <default>false</default>
+                <label>Termo de Quitação</label>
+            </value>
+            <value>
+                <fullName>Procuração de TQ</fullName>
+                <default>false</default>
+                <label>Procuração de TQ</label>
+            </value>
+            <value>
+                <fullName>Procuração SL</fullName>
+                <default>false</default>
+                <label>Procuração SL</label>
+            </value>
+            <value>
+                <fullName>Procuração BY</fullName>
+                <default>false</default>
+                <label>Procuração BY</label>
+            </value>
+            <value>
+                <fullName>Atualização de Casamento BY</fullName>
+                <default>false</default>
+                <label>Atualização de Casamento BY</label>
+            </value>
+            <value>
+                <fullName>Atualização de Casamento SL</fullName>
+                <default>false</default>
+                <label>Atualização de Casamento SL</label>
+            </value>
+            <value>
+                <fullName>Atualização de União Estável BY</fullName>
+                <default>false</default>
+                <label>Atualização de União Estável BY</label>
+            </value>
+            <value>
+                <fullName>Atualização de União Estável SL</fullName>
+                <default>false</default>
+                <label>Atualização de União Estável SL</label>
+            </value>
+            <value>
+                <fullName>Registro de pacto antenupcial BY</fullName>
+                <default>false</default>
+                <label>Registro de pacto antenupcial BY</label>
+            </value>
+            <value>
+                <fullName>Registro de pacto antenupcial SL</fullName>
+                <default>false</default>
+                <label>Registro de pacto antenupcial SL</label>
+            </value>
+            <value>
+                <fullName>Divórcio SL</fullName>
+                <default>false</default>
+                <label>Divórcio SL</label>
+            </value>
+            <value>
+                <fullName>Divórcio BY</fullName>
+                <default>false</default>
+                <label>Divórcio BY</label>
+            </value>
+            <value>
+                <fullName>Documentos pessoais SL</fullName>
+                <default>false</default>
+                <label>Documentos pessoais SL</label>
+            </value>
+            <value>
+                <fullName>Documentos pessoais BY</fullName>
+                <default>false</default>
+                <label>Documentos pessoais BY</label>
+            </value>
+            <value>
+                <fullName>Atualização de dados do imóvel</fullName>
+                <default>false</default>
+                <label>Atualização de dados do imóvel</label>
+            </value>
+            <value>
+                <fullName>HIS/HMP</fullName>
+                <default>false</default>
+                <label>HIS/HMP</label>
+            </value>
+            <value>
+                <fullName>ITBI</fullName>
+                <default>false</default>
+                <label>ITBI</label>
+            </value>
+            <value>
+                <fullName>Inventário</fullName>
+                <default>false</default>
+                <label>Inventário</label>
+            </value>
+            <value>
+                <fullName>Restrições judiciais (penhora, indisponibilidade, etc)</fullName>
+                <default>false</default>
+                <label>Restrições judiciais (penhora, indisponibilidade, etc)</label>
+            </value>
+            <value>
+                <fullName>Outros</fullName>
+                <default>false</default>
+                <label>Outros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PartnerRealtyAgency__c</fullName>
+    <label>Imobiliária Parceira</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2Ap Imóveis</fullName>
+                <default>false</default>
+                <label>2Ap Imóveis</label>
+            </value>
+            <value>
+                <fullName>3 Quadras</fullName>
+                <default>false</default>
+                <label>3 Quadras</label>
+            </value>
+            <value>
+                <fullName>4Thorres Imóveis</fullName>
+                <default>false</default>
+                <label>4Thorres Imóveis</label>
+            </value>
+            <value>
+                <fullName>7G7 Negócios Imobiliários</fullName>
+                <default>false</default>
+                <label>7G7 Negócios Imobiliários</label>
+            </value>
+            <value>
+                <fullName>Abrylar Imóveis</fullName>
+                <default>false</default>
+                <label>Abrylar Imóveis</label>
+            </value>
+            <value>
+                <fullName>Achei Morumbi</fullName>
+                <default>false</default>
+                <label>Achei Morumbi</label>
+            </value>
+            <value>
+                <fullName>Ad Company</fullName>
+                <default>false</default>
+                <label>Ad Company</label>
+            </value>
+            <value>
+                <fullName>Ágape negócios imobiliários</fullName>
+                <default>false</default>
+                <label>Ágape negócios imobiliários</label>
+            </value>
+            <value>
+                <fullName>Aguiar Negócios Imobiliários Ltda</fullName>
+                <default>false</default>
+                <label>Aguiar Negócios Imobiliários Ltda</label>
+            </value>
+            <value>
+                <fullName>Aleixo</fullName>
+                <default>false</default>
+                <label>Aleixo</label>
+            </value>
+            <value>
+                <fullName>Aliança Viva</fullName>
+                <default>false</default>
+                <label>Aliança Viva</label>
+            </value>
+            <value>
+                <fullName>Aliança Viva Botafogo</fullName>
+                <default>false</default>
+                <label>Aliança Viva Botafogo</label>
+            </value>
+            <value>
+                <fullName>Aliança Viva Flamengo</fullName>
+                <default>false</default>
+                <label>Aliança Viva Flamengo</label>
+            </value>
+            <value>
+                <fullName>Aliança Viva Ipanema</fullName>
+                <default>false</default>
+                <label>Aliança Viva Ipanema</label>
+            </value>
+            <value>
+                <fullName>Aliare Imoveis</fullName>
+                <default>false</default>
+                <label>Aliare Imoveis</label>
+            </value>
+            <value>
+                <fullName>AoCubo</fullName>
+                <default>false</default>
+                <label>AoCubo</label>
+            </value>
+            <value>
+                <fullName>Ativa Imoveis BH</fullName>
+                <default>false</default>
+                <label>Ativa Imoveis BH</label>
+            </value>
+            <value>
+                <fullName>Atual Imóveis SS Ltda</fullName>
+                <default>false</default>
+                <label>Atual Imóveis SS Ltda</label>
+            </value>
+            <value>
+                <fullName>Augusto Gomes Imoveis</fullName>
+                <default>false</default>
+                <label>Augusto Gomes Imoveis</label>
+            </value>
+            <value>
+                <fullName>Avelar Imóveis</fullName>
+                <default>false</default>
+                <label>Avelar Imóveis</label>
+            </value>
+            <value>
+                <fullName>Avila e Manno Imóveis Ltda</fullName>
+                <default>false</default>
+                <label>Avila e Manno Imóveis Ltda</label>
+            </value>
+            <value>
+                <fullName>Avilar</fullName>
+                <default>false</default>
+                <label>Avilar</label>
+            </value>
+            <value>
+                <fullName>Ax7 Investimentos</fullName>
+                <default>false</default>
+                <label>Ax7 Investimentos</label>
+            </value>
+            <value>
+                <fullName>Azulle Imoveis</fullName>
+                <default>false</default>
+                <label>Azulle Imoveis</label>
+            </value>
+            <value>
+                <fullName>BACELLAR IMOBILIARIA LTDA ME</fullName>
+                <default>false</default>
+                <label>BACELLAR IMOBILIARIA LTDA ME</label>
+            </value>
+            <value>
+                <fullName>Badain Imóveis</fullName>
+                <default>false</default>
+                <label>Badain Imóveis</label>
+            </value>
+            <value>
+                <fullName>Bbz Imóveis</fullName>
+                <default>false</default>
+                <label>Bbz Imóveis</label>
+            </value>
+            <value>
+                <fullName>Be Soluções Imobiliárias</fullName>
+                <default>false</default>
+                <label>Be Soluções Imobiliárias</label>
+            </value>
+            <value>
+                <fullName>Beg Imoveis</fullName>
+                <default>false</default>
+                <label>Beg Imoveis</label>
+            </value>
+            <value>
+                <fullName>Belossá Imóveis</fullName>
+                <default>false</default>
+                <label>Belossá Imóveis</label>
+            </value>
+            <value>
+                <fullName>Berge Brokers Consultoria Imobiliária</fullName>
+                <default>false</default>
+                <label>Berge Brokers Consultoria Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Best Ville Imoveis</fullName>
+                <default>false</default>
+                <label>Best Ville Imoveis</label>
+            </value>
+            <value>
+                <fullName>Bh Lar Imóveis</fullName>
+                <default>false</default>
+                <label>Bh Lar Imóveis</label>
+            </value>
+            <value>
+                <fullName>Bihain  Negócios Imobiliários Ltda</fullName>
+                <default>false</default>
+                <label>Bihain  Negócios Imobiliários Ltda</label>
+            </value>
+            <value>
+                <fullName>Bons Negócios Imobiliários - BNI</fullName>
+                <default>false</default>
+                <label>Bons Negócios Imobiliários - BNI</label>
+            </value>
+            <value>
+                <fullName>Bos Imoveis</fullName>
+                <default>false</default>
+                <label>Bos Imoveis</label>
+            </value>
+            <value>
+                <fullName>BQ House</fullName>
+                <default>false</default>
+                <label>BQ House</label>
+            </value>
+            <value>
+                <fullName>Brand Real Estate Ltda</fullName>
+                <default>false</default>
+                <label>Brand Real Estate Ltda</label>
+            </value>
+            <value>
+                <fullName>Brief Imóveis Soluções Imobiliárias</fullName>
+                <default>false</default>
+                <label>Brief Imóveis Soluções Imobiliárias</label>
+            </value>
+            <value>
+                <fullName>Brk</fullName>
+                <default>false</default>
+                <label>Brk</label>
+            </value>
+            <value>
+                <fullName>Brunoe Cia</fullName>
+                <default>false</default>
+                <label>Brunoe Cia</label>
+            </value>
+            <value>
+                <fullName>C10 Imóveis</fullName>
+                <default>false</default>
+                <label>C10 Imóveis</label>
+            </value>
+            <value>
+                <fullName>C2 Imob</fullName>
+                <default>false</default>
+                <label>C2 Imob</label>
+            </value>
+            <value>
+                <fullName>Carlos Leão Imobiliaria</fullName>
+                <default>false</default>
+                <label>Carlos Leão Imobiliaria</label>
+            </value>
+            <value>
+                <fullName>Casa 3</fullName>
+                <default>false</default>
+                <label>Casa 3</label>
+            </value>
+            <value>
+                <fullName>Casa Empreendimentos Ltda</fullName>
+                <default>false</default>
+                <label>Casa Empreendimentos Ltda</label>
+            </value>
+            <value>
+                <fullName>Casa Muniz</fullName>
+                <default>false</default>
+                <label>Casa Muniz</label>
+            </value>
+            <value>
+                <fullName>Casa Onze Imóveis</fullName>
+                <default>false</default>
+                <label>Casa Onze Imóveis</label>
+            </value>
+            <value>
+                <fullName>Casa Parkes</fullName>
+                <default>false</default>
+                <label>Casa Parkes</label>
+            </value>
+            <value>
+                <fullName>Casa Passoni</fullName>
+                <default>false</default>
+                <label>Casa Passoni</label>
+            </value>
+            <value>
+                <fullName>Casteleti Imóveis</fullName>
+                <default>false</default>
+                <label>Casteleti Imóveis</label>
+            </value>
+            <value>
+                <fullName>Catedral Brokers</fullName>
+                <default>false</default>
+                <label>Catedral Brokers</label>
+            </value>
+            <value>
+                <fullName>Cazacov Serviços Imobiliarios LTDA</fullName>
+                <default>false</default>
+                <label>Cazacov Serviços Imobiliarios LTDA</label>
+            </value>
+            <value>
+                <fullName>Cb Curvelo Barbosa Imóveis Ltda</fullName>
+                <default>false</default>
+                <label>Cb Curvelo Barbosa Imóveis Ltda</label>
+            </value>
+            <value>
+                <fullName>Century 21 Alpha</fullName>
+                <default>false</default>
+                <label>Century 21 Alpha</label>
+            </value>
+            <value>
+                <fullName>Cisper Imóveis</fullName>
+                <default>false</default>
+                <label>Cisper Imóveis</label>
+            </value>
+            <value>
+                <fullName>City bh imóveis</fullName>
+                <default>false</default>
+                <label>City bh imóveis</label>
+            </value>
+            <value>
+                <fullName>Colonia Negócios imobiliários</fullName>
+                <default>false</default>
+                <label>Colonia Negócios imobiliários</label>
+            </value>
+            <value>
+                <fullName>Conectar Imóveis Bh</fullName>
+                <default>false</default>
+                <label>Conectar Imóveis Bh</label>
+            </value>
+            <value>
+                <fullName>Costa Nova Imóveis</fullName>
+                <default>false</default>
+                <label>Costa Nova Imóveis</label>
+            </value>
+            <value>
+                <fullName>Crédito Real Makers</fullName>
+                <default>false</default>
+                <label>Crédito Real Makers</label>
+            </value>
+            <value>
+                <fullName>Cristal Imóveis</fullName>
+                <default>false</default>
+                <label>Cristal Imóveis</label>
+            </value>
+            <value>
+                <fullName>Cristina Bueno</fullName>
+                <default>false</default>
+                <label>Cristina Bueno</label>
+            </value>
+            <value>
+                <fullName>Curatolo Imoveis</fullName>
+                <default>false</default>
+                <label>Curatolo Imoveis</label>
+            </value>
+            <value>
+                <fullName>Curcia Imóveis - São Paulo/sp</fullName>
+                <default>false</default>
+                <label>Curcia Imóveis - São Paulo/sp</label>
+            </value>
+            <value>
+                <fullName>D&apos;Aguiar Imóveis</fullName>
+                <default>false</default>
+                <label>D&apos;Aguiar Imóveis</label>
+            </value>
+            <value>
+                <fullName>Daniela Franco Imóveis</fullName>
+                <default>false</default>
+                <label>Daniela Franco Imóveis</label>
+            </value>
+            <value>
+                <fullName>Dedicar Soluções</fullName>
+                <default>false</default>
+                <label>Dedicar Soluções</label>
+            </value>
+            <value>
+                <fullName>Despertar Imoveis</fullName>
+                <default>false</default>
+                <label>Despertar Imoveis</label>
+            </value>
+            <value>
+                <fullName>Dg7 Imóveis</fullName>
+                <default>false</default>
+                <label>Dg7 Imóveis</label>
+            </value>
+            <value>
+                <fullName>Diluaneimoveis</fullName>
+                <default>false</default>
+                <label>Diluaneimoveis</label>
+            </value>
+            <value>
+                <fullName>Dinâmica Imóveis Ltda</fullName>
+                <default>false</default>
+                <label>Dinâmica Imóveis Ltda</label>
+            </value>
+            <value>
+                <fullName>Dom Paiva imóveis</fullName>
+                <default>false</default>
+                <label>Dom Paiva imóveis</label>
+            </value>
+            <value>
+                <fullName>Duvalle Consultoria Imobiliária</fullName>
+                <default>false</default>
+                <label>Duvalle Consultoria Imobiliária</label>
+            </value>
+            <value>
+                <fullName>E-19 Imóveis</fullName>
+                <default>false</default>
+                <label>E-19 Imóveis</label>
+            </value>
+            <value>
+                <fullName>Elu</fullName>
+                <default>false</default>
+                <label>Elu</label>
+            </value>
+            <value>
+                <fullName>EmCasa Rio</fullName>
+                <default>false</default>
+                <label>EmCasa Rio</label>
+            </value>
+            <value>
+                <fullName>EmCasa São Paulo</fullName>
+                <default>false</default>
+                <label>EmCasa São Paulo</label>
+            </value>
+            <value>
+                <fullName>Estimovel Consultoria imobiliária</fullName>
+                <default>false</default>
+                <label>Estimovel Consultoria imobiliária</label>
+            </value>
+            <value>
+                <fullName>Étic Imóveis Negócios Imobiliários Ltda</fullName>
+                <default>false</default>
+                <label>Étic Imóveis Negócios Imobiliários Ltda</label>
+            </value>
+            <value>
+                <fullName>Evox</fullName>
+                <default>false</default>
+                <label>Evox</label>
+            </value>
+            <value>
+                <fullName>FAVORITA IMOVEIS</fullName>
+                <default>false</default>
+                <label>FAVORITA IMOVEIS</label>
+            </value>
+            <value>
+                <fullName>Felicita Imóveis</fullName>
+                <default>false</default>
+                <label>Felicita Imóveis</label>
+            </value>
+            <value>
+                <fullName>Ferreira Araujo Negocios</fullName>
+                <default>false</default>
+                <label>Ferreira Araujo Negocios</label>
+            </value>
+            <value>
+                <fullName>FF Corretagem</fullName>
+                <default>false</default>
+                <label>FF Corretagem</label>
+            </value>
+            <value>
+                <fullName>FHN NEGOCIOS IMOBILIÁRIOS</fullName>
+                <default>false</default>
+                <label>FHN NEGOCIOS IMOBILIÁRIOS</label>
+            </value>
+            <value>
+                <fullName>Flowimoveis</fullName>
+                <default>false</default>
+                <label>Flowimoveis</label>
+            </value>
+            <value>
+                <fullName>Forte Prime Imoveis</fullName>
+                <default>false</default>
+                <label>Forte Prime Imoveis</label>
+            </value>
+            <value>
+                <fullName>Fox Imobiliária</fullName>
+                <default>false</default>
+                <label>Fox Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Fr Imoveis</fullName>
+                <default>false</default>
+                <label>Fr Imoveis</label>
+            </value>
+            <value>
+                <fullName>Freire Br Imóveis</fullName>
+                <default>false</default>
+                <label>Freire Br Imóveis</label>
+            </value>
+            <value>
+                <fullName>Front Imobiliaria</fullName>
+                <default>false</default>
+                <label>Front Imobiliaria</label>
+            </value>
+            <value>
+                <fullName>Fx7</fullName>
+                <default>false</default>
+                <label>Fx7</label>
+            </value>
+            <value>
+                <fullName>FZ Administracao de Imóveis e Condominios Ltda</fullName>
+                <default>false</default>
+                <label>FZ Administracao de Imóveis e Condominios Ltda</label>
+            </value>
+            <value>
+                <fullName>G8 Inteligência Imobiliária</fullName>
+                <default>false</default>
+                <label>G8 Inteligência Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Gade Imóveis LTDA</fullName>
+                <default>false</default>
+                <label>Gade Imóveis LTDA</label>
+            </value>
+            <value>
+                <fullName>Ganan Imóveis</fullName>
+                <default>false</default>
+                <label>Ganan Imóveis</label>
+            </value>
+            <value>
+                <fullName>Ganzaroli Intermediação e Desenvolvimento Imobiliário</fullName>
+                <default>false</default>
+                <label>Ganzaroli Intermediação e Desenvolvimento Imobiliário</label>
+            </value>
+            <value>
+                <fullName>Gaúcho Imóveis Rj</fullName>
+                <default>false</default>
+                <label>Gaúcho Imóveis Rj</label>
+            </value>
+            <value>
+                <fullName>Gênesis Imóveis</fullName>
+                <default>false</default>
+                <label>Gênesis Imóveis</label>
+            </value>
+            <value>
+                <fullName>Golden Imobiliária</fullName>
+                <default>false</default>
+                <label>Golden Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Greggio Imóveis</fullName>
+                <default>false</default>
+                <label>Greggio Imóveis</label>
+            </value>
+            <value>
+                <fullName>Grupo Seu Imóvel</fullName>
+                <default>false</default>
+                <label>Grupo Seu Imóvel</label>
+            </value>
+            <value>
+                <fullName>Grupo Thera</fullName>
+                <default>false</default>
+                <label>Grupo Thera</label>
+            </value>
+            <value>
+                <fullName>Grupo Urban</fullName>
+                <default>false</default>
+                <label>Grupo Urban</label>
+            </value>
+            <value>
+                <fullName>Grupo Ymk</fullName>
+                <default>false</default>
+                <label>Grupo Ymk</label>
+            </value>
+            <value>
+                <fullName>Hangar Prime</fullName>
+                <default>false</default>
+                <label>Hangar Prime</label>
+            </value>
+            <value>
+                <fullName>Heloisa Chaves Imóveis</fullName>
+                <default>false</default>
+                <label>Heloisa Chaves Imóveis</label>
+            </value>
+            <value>
+                <fullName>Henry Imóveis</fullName>
+                <default>false</default>
+                <label>Henry Imóveis</label>
+            </value>
+            <value>
+                <fullName>Hernandes Negócios Imobiliários</fullName>
+                <default>false</default>
+                <label>Hernandes Negócios Imobiliários</label>
+            </value>
+            <value>
+                <fullName>Hgbimoveis</fullName>
+                <default>false</default>
+                <label>Hgbimoveis</label>
+            </value>
+            <value>
+                <fullName>Hidaka</fullName>
+                <default>false</default>
+                <label>Hidaka</label>
+            </value>
+            <value>
+                <fullName>Hit Imoveis</fullName>
+                <default>false</default>
+                <label>Hit Imoveis</label>
+            </value>
+            <value>
+                <fullName>Hom3</fullName>
+                <default>false</default>
+                <label>Hom3</label>
+            </value>
+            <value>
+                <fullName>HomeHub Arpoador</fullName>
+                <default>false</default>
+                <label>HomeHub Arpoador</label>
+            </value>
+            <value>
+                <fullName>HomeHub Atlântica</fullName>
+                <default>false</default>
+                <label>HomeHub Atlântica</label>
+            </value>
+            <value>
+                <fullName>Homehub Corcovado</fullName>
+                <default>false</default>
+                <label>Homehub Corcovado</label>
+            </value>
+            <value>
+                <fullName>HomeHub Enseada</fullName>
+                <default>false</default>
+                <label>HomeHub Enseada</label>
+            </value>
+            <value>
+                <fullName>HomeHub Jardim Botânico</fullName>
+                <default>false</default>
+                <label>HomeHub Jardim Botânico</label>
+            </value>
+            <value>
+                <fullName>HomeHub Marapendi</fullName>
+                <default>false</default>
+                <label>HomeHub Marapendi</label>
+            </value>
+            <value>
+                <fullName>Homehub Matriz</fullName>
+                <default>false</default>
+                <label>Homehub Matriz</label>
+            </value>
+            <value>
+                <fullName>HomeHub Nova Barra</fullName>
+                <default>false</default>
+                <label>HomeHub Nova Barra</label>
+            </value>
+            <value>
+                <fullName>HomeHub Olegário</fullName>
+                <default>false</default>
+                <label>HomeHub Olegário</label>
+            </value>
+            <value>
+                <fullName>HomeHub Palace</fullName>
+                <default>false</default>
+                <label>HomeHub Palace</label>
+            </value>
+            <value>
+                <fullName>Homehub Palácio Do Catete</fullName>
+                <default>false</default>
+                <label>Homehub Palácio Do Catete</label>
+            </value>
+            <value>
+                <fullName>Homehub Parque Guinle</fullName>
+                <default>false</default>
+                <label>Homehub Parque Guinle</label>
+            </value>
+            <value>
+                <fullName>Homehub Parque Lage</fullName>
+                <default>false</default>
+                <label>Homehub Parque Lage</label>
+            </value>
+            <value>
+                <fullName>Homehub Posto 10</fullName>
+                <default>false</default>
+                <label>Homehub Posto 10</label>
+            </value>
+            <value>
+                <fullName>HomeHub Prainha</fullName>
+                <default>false</default>
+                <label>HomeHub Prainha</label>
+            </value>
+            <value>
+                <fullName>Horizonte House</fullName>
+                <default>false</default>
+                <label>Horizonte House</label>
+            </value>
+            <value>
+                <fullName>Ihouse Imóveis</fullName>
+                <default>false</default>
+                <label>Ihouse Imóveis</label>
+            </value>
+            <value>
+                <fullName>Imagine Imoveis</fullName>
+                <default>false</default>
+                <label>Imagine Imoveis</label>
+            </value>
+            <value>
+                <fullName>IMOBILIARIA COMPARE LTDA</fullName>
+                <default>false</default>
+                <label>IMOBILIARIA COMPARE LTDA</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Jazz</fullName>
+                <default>false</default>
+                <label>Imobiliária Jazz</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Morada Jardim</fullName>
+                <default>false</default>
+                <label>Imobiliária Morada Jardim</label>
+            </value>
+            <value>
+                <fullName>IMOBILIARIA ON BROKERS</fullName>
+                <default>false</default>
+                <label>IMOBILIARIA ON BROKERS</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Takaki</fullName>
+                <default>false</default>
+                <label>Imobiliária Takaki</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Temponi</fullName>
+                <default>false</default>
+                <label>Imobiliária Temponi</label>
+            </value>
+            <value>
+                <fullName>Imobiliária The One 1</fullName>
+                <default>false</default>
+                <label>Imobiliária The One 1</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Viver Morumbi</fullName>
+                <default>false</default>
+                <label>Imobiliária Viver Morumbi</label>
+            </value>
+            <value>
+                <fullName>Imobz</fullName>
+                <default>false</default>
+                <label>Imobz</label>
+            </value>
+            <value>
+                <fullName>Imóveis Certo</fullName>
+                <default>false</default>
+                <label>Imóveis Certo</label>
+            </value>
+            <value>
+                <fullName>Imóveis No Centro SP</fullName>
+                <default>false</default>
+                <label>Imóveis No Centro SP</label>
+            </value>
+            <value>
+                <fullName>Impacto Imoveis</fullName>
+                <default>false</default>
+                <label>Impacto Imoveis</label>
+            </value>
+            <value>
+                <fullName>INTERMEDIO IMOVEIS LTDA</fullName>
+                <default>false</default>
+                <label>INTERMEDIO IMOVEIS LTDA</label>
+            </value>
+            <value>
+                <fullName>Jabôr Imóveis</fullName>
+                <default>false</default>
+                <label>Jabôr Imóveis</label>
+            </value>
+            <value>
+                <fullName>Jotta Galvão</fullName>
+                <default>false</default>
+                <label>Jotta Galvão</label>
+            </value>
+            <value>
+                <fullName>Jrs Imoveis</fullName>
+                <default>false</default>
+                <label>Jrs Imoveis</label>
+            </value>
+            <value>
+                <fullName>Judice &amp; Araujo Barra</fullName>
+                <default>false</default>
+                <label>Judice &amp; Araujo Barra</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Afonso Pena</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Afonso Pena</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Flamengo</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Flamengo</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Ilha Do Governador</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Ilha Do Governador</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Imóveis Barra Da Tijuca</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Imóveis Barra Da Tijuca</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Imóveis Copacabana</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Imóveis Copacabana</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Imóveis Ipanema</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Imóveis Ipanema</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Imóveis Meier</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Imóveis Meier</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Imóveis Recreio</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Imóveis Recreio</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Imóveis Saens Pena</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Imóveis Saens Pena</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Jacarepagua</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Jacarepagua</label>
+            </value>
+            <value>
+                <fullName>Julio Bogoricin Leblon</fullName>
+                <default>false</default>
+                <label>Julio Bogoricin Leblon</label>
+            </value>
+            <value>
+                <fullName>JV Oliveira Imóveis</fullName>
+                <default>false</default>
+                <label>JV Oliveira Imóveis</label>
+            </value>
+            <value>
+                <fullName>Karioca Imóveis</fullName>
+                <default>false</default>
+                <label>Karioca Imóveis</label>
+            </value>
+            <value>
+                <fullName>Kaza Boutique Empreendimentos Imobiliários Ltda</fullName>
+                <default>false</default>
+                <label>Kaza Boutique Empreendimentos Imobiliários Ltda</label>
+            </value>
+            <value>
+                <fullName>kin imoveis</fullName>
+                <default>false</default>
+                <label>kin imoveis</label>
+            </value>
+            <value>
+                <fullName>Krisos Imobiliária</fullName>
+                <default>false</default>
+                <label>Krisos Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Lares  e Andares Imóveis</fullName>
+                <default>false</default>
+                <label>Lares  e Andares Imóveis</label>
+            </value>
+            <value>
+                <fullName>Lares Assessoria De Negócios Imobiliários</fullName>
+                <default>false</default>
+                <label>Lares Assessoria De Negócios Imobiliários</label>
+            </value>
+            <value>
+                <fullName>Lastro Forte</fullName>
+                <default>false</default>
+                <label>Lastro Forte</label>
+            </value>
+            <value>
+                <fullName>Leonello Imóveis</fullName>
+                <default>false</default>
+                <label>Leonello Imóveis</label>
+            </value>
+            <value>
+                <fullName>Limão Imóveis</fullName>
+                <default>false</default>
+                <label>Limão Imóveis</label>
+            </value>
+            <value>
+                <fullName>Liven</fullName>
+                <default>false</default>
+                <label>Liven</label>
+            </value>
+            <value>
+                <fullName>Livima</fullName>
+                <default>false</default>
+                <label>Livima</label>
+            </value>
+            <value>
+                <fullName>livvu Intermediação de Negócios LTDA</fullName>
+                <default>false</default>
+                <label>livvu Intermediação de Negócios LTDA</label>
+            </value>
+            <value>
+                <fullName>LOGUS IMOVEIS</fullName>
+                <default>false</default>
+                <label>LOGUS IMOVEIS</label>
+            </value>
+            <value>
+                <fullName>Lomi</fullName>
+                <default>false</default>
+                <label>Lomi</label>
+            </value>
+            <value>
+                <fullName>Lopes 8A</fullName>
+                <default>false</default>
+                <label>Lopes 8A</label>
+            </value>
+            <value>
+                <fullName>Lopes Barão</fullName>
+                <default>false</default>
+                <label>Lopes Barão</label>
+            </value>
+            <value>
+                <fullName>Lopes Central</fullName>
+                <default>false</default>
+                <label>Lopes Central</label>
+            </value>
+            <value>
+                <fullName>Lopes Condovel</fullName>
+                <default>false</default>
+                <label>Lopes Condovel</label>
+            </value>
+            <value>
+                <fullName>Lopes Consult</fullName>
+                <default>false</default>
+                <label>Lopes Consult</label>
+            </value>
+            <value>
+                <fullName>Lopes Destaque</fullName>
+                <default>false</default>
+                <label>Lopes Destaque</label>
+            </value>
+            <value>
+                <fullName>Lopes Duquesa</fullName>
+                <default>false</default>
+                <label>Lopes Duquesa</label>
+            </value>
+            <value>
+                <fullName>Lopes DWorld</fullName>
+                <default>false</default>
+                <label>Lopes DWorld</label>
+            </value>
+            <value>
+                <fullName>Lopes EGC</fullName>
+                <default>false</default>
+                <label>Lopes EGC</label>
+            </value>
+            <value>
+                <fullName>Lopes Elite</fullName>
+                <default>false</default>
+                <label>Lopes Elite</label>
+            </value>
+            <value>
+                <fullName>Lopes Empire</fullName>
+                <default>false</default>
+                <label>Lopes Empire</label>
+            </value>
+            <value>
+                <fullName>Lopes Freitas</fullName>
+                <default>false</default>
+                <label>Lopes Freitas</label>
+            </value>
+            <value>
+                <fullName>Lopes Golden</fullName>
+                <default>false</default>
+                <label>Lopes Golden</label>
+            </value>
+            <value>
+                <fullName>Lopes Imoplan</fullName>
+                <default>false</default>
+                <label>Lopes Imoplan</label>
+            </value>
+            <value>
+                <fullName>Lopes Invest House</fullName>
+                <default>false</default>
+                <label>Lopes Invest House</label>
+            </value>
+            <value>
+                <fullName>Lopes Life</fullName>
+                <default>false</default>
+                <label>Lopes Life</label>
+            </value>
+            <value>
+                <fullName>Lopes LT Brokers</fullName>
+                <default>false</default>
+                <label>Lopes LT Brokers</label>
+            </value>
+            <value>
+                <fullName>Lopes Matriz</fullName>
+                <default>false</default>
+                <label>Lopes Matriz</label>
+            </value>
+            <value>
+                <fullName>Lopes MBI</fullName>
+                <default>false</default>
+                <label>Lopes MBI</label>
+            </value>
+            <value>
+                <fullName>Lopes Mobi</fullName>
+                <default>false</default>
+                <label>Lopes Mobi</label>
+            </value>
+            <value>
+                <fullName>Lopes Next</fullName>
+                <default>false</default>
+                <label>Lopes Next</label>
+            </value>
+            <value>
+                <fullName>Lopes Ouro</fullName>
+                <default>false</default>
+                <label>Lopes Ouro</label>
+            </value>
+            <value>
+                <fullName>Lopes Premier</fullName>
+                <default>false</default>
+                <label>Lopes Premier</label>
+            </value>
+            <value>
+                <fullName>Lopes Prime</fullName>
+                <default>false</default>
+                <label>Lopes Prime</label>
+            </value>
+            <value>
+                <fullName>Lopes RK</fullName>
+                <default>false</default>
+                <label>Lopes RK</label>
+            </value>
+            <value>
+                <fullName>Lopes RTG</fullName>
+                <default>false</default>
+                <label>Lopes RTG</label>
+            </value>
+            <value>
+                <fullName>Lopes Sanches</fullName>
+                <default>false</default>
+                <label>Lopes Sanches</label>
+            </value>
+            <value>
+                <fullName>Lopes SGM</fullName>
+                <default>false</default>
+                <label>Lopes SGM</label>
+            </value>
+            <value>
+                <fullName>Lopes Sobral</fullName>
+                <default>false</default>
+                <label>Lopes Sobral</label>
+            </value>
+            <value>
+                <fullName>Lopes Urban</fullName>
+                <default>false</default>
+                <label>Lopes Urban</label>
+            </value>
+            <value>
+                <fullName>Lopes Vértice</fullName>
+                <default>false</default>
+                <label>Lopes Vértice</label>
+            </value>
+            <value>
+                <fullName>Lopes Vitoria  Garden</fullName>
+                <default>false</default>
+                <label>Lopes Vitoria  Garden</label>
+            </value>
+            <value>
+                <fullName>Lopes VZN</fullName>
+                <default>false</default>
+                <label>Lopes VZN</label>
+            </value>
+            <value>
+                <fullName>Lopes WR</fullName>
+                <default>false</default>
+                <label>Lopes WR</label>
+            </value>
+            <value>
+                <fullName>Lopes Yumi</fullName>
+                <default>false</default>
+                <label>Lopes Yumi</label>
+            </value>
+            <value>
+                <fullName>Lucor Negocios Imobiliários</fullName>
+                <default>false</default>
+                <label>Lucor Negocios Imobiliários</label>
+            </value>
+            <value>
+                <fullName>Luxton Excelência Imobiliária</fullName>
+                <default>false</default>
+                <label>Luxton Excelência Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Mafuz Imóveis De Luxo - Lourdes</fullName>
+                <default>false</default>
+                <label>Mafuz Imóveis De Luxo - Lourdes</label>
+            </value>
+            <value>
+                <fullName>Mafuz Imóveis De Luxo - Nova Lima</fullName>
+                <default>false</default>
+                <label>Mafuz Imóveis De Luxo - Nova Lima</label>
+            </value>
+            <value>
+                <fullName>Marc</fullName>
+                <default>false</default>
+                <label>Marc</label>
+            </value>
+            <value>
+                <fullName>Marques Imóveis</fullName>
+                <default>false</default>
+                <label>Marques Imóveis</label>
+            </value>
+            <value>
+                <fullName>MarTer Imóveis</fullName>
+                <default>false</default>
+                <label>MarTer Imóveis</label>
+            </value>
+            <value>
+                <fullName>Martins Imoveis</fullName>
+                <default>false</default>
+                <label>Martins Imoveis</label>
+            </value>
+            <value>
+                <fullName>Max Brokers</fullName>
+                <default>false</default>
+                <label>Max Brokers</label>
+            </value>
+            <value>
+                <fullName>Mdt Centro De Negócios</fullName>
+                <default>false</default>
+                <label>Mdt Centro De Negócios</label>
+            </value>
+            <value>
+                <fullName>Melhor Negócio</fullName>
+                <default>false</default>
+                <label>Melhor Negócio</label>
+            </value>
+            <value>
+                <fullName>Mello Imóveis e Administração de Bens</fullName>
+                <default>false</default>
+                <label>Mello Imóveis e Administração de Bens</label>
+            </value>
+            <value>
+                <fullName>Mendes e Rimas</fullName>
+                <default>false</default>
+                <label>Mendes e Rimas</label>
+            </value>
+            <value>
+                <fullName>Mendes E Rimas Imóveis</fullName>
+                <default>false</default>
+                <label>Mendes E Rimas Imóveis</label>
+            </value>
+            <value>
+                <fullName>Merida Imóveis</fullName>
+                <default>false</default>
+                <label>Merida Imóveis</label>
+            </value>
+            <value>
+                <fullName>Meta House Imóveis</fullName>
+                <default>false</default>
+                <label>Meta House Imóveis</label>
+            </value>
+            <value>
+                <fullName>Mfelix</fullName>
+                <default>false</default>
+                <label>Mfelix</label>
+            </value>
+            <value>
+                <fullName>Mondelo &amp; Bakaleiko</fullName>
+                <default>false</default>
+                <label>Mondelo &amp; Bakaleiko</label>
+            </value>
+            <value>
+                <fullName>Monopólio Imobiliária</fullName>
+                <default>false</default>
+                <label>Monopólio Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Montreal Business</fullName>
+                <default>false</default>
+                <label>Montreal Business</label>
+            </value>
+            <value>
+                <fullName>Moraes Reis Imóveis LTDA</fullName>
+                <default>false</default>
+                <label>Moraes Reis Imóveis LTDA</label>
+            </value>
+            <value>
+                <fullName>Morumbi Haus Imóveis</fullName>
+                <default>false</default>
+                <label>Morumbi Haus Imóveis</label>
+            </value>
+            <value>
+                <fullName>Murano</fullName>
+                <default>false</default>
+                <label>Murano</label>
+            </value>
+            <value>
+                <fullName>Na Ponta Da Chave</fullName>
+                <default>false</default>
+                <label>Na Ponta Da Chave</label>
+            </value>
+            <value>
+                <fullName>Nascimento Figueiredo Negócios Imobiliários</fullName>
+                <default>false</default>
+                <label>Nascimento Figueiredo Negócios Imobiliários</label>
+            </value>
+            <value>
+                <fullName>NextAp Negócios Imobiliários</fullName>
+                <default>false</default>
+                <label>NextAp Negócios Imobiliários</label>
+            </value>
+            <value>
+                <fullName>Nominar Imobiliária</fullName>
+                <default>false</default>
+                <label>Nominar Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Norteares</fullName>
+                <default>false</default>
+                <label>Norteares</label>
+            </value>
+            <value>
+                <fullName>NORTELAR ADMINISTRAÇAO E ASSESSORIA</fullName>
+                <default>false</default>
+                <label>NORTELAR ADMINISTRAÇAO E ASSESSORIA</label>
+            </value>
+            <value>
+                <fullName>Novaabc imóveis</fullName>
+                <default>false</default>
+                <label>Novaabc imóveis</label>
+            </value>
+            <value>
+                <fullName>Novo Lar</fullName>
+                <default>false</default>
+                <label>Novo Lar</label>
+            </value>
+            <value>
+                <fullName>Oz Imóveis</fullName>
+                <default>false</default>
+                <label>Oz Imóveis</label>
+            </value>
+            <value>
+                <fullName>Panamby</fullName>
+                <default>false</default>
+                <label>Panamby</label>
+            </value>
+            <value>
+                <fullName>Pascal Imóveis Ltda</fullName>
+                <default>false</default>
+                <label>Pascal Imóveis Ltda</label>
+            </value>
+            <value>
+                <fullName>Paula Imóveis E Administração Ltda</fullName>
+                <default>false</default>
+                <label>Paula Imóveis E Administração Ltda</label>
+            </value>
+            <value>
+                <fullName>Pc Consultoria Imobiliária</fullName>
+                <default>false</default>
+                <label>Pc Consultoria Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Personale</fullName>
+                <default>false</default>
+                <label>Personale</label>
+            </value>
+            <value>
+                <fullName>PHD IMÓVEIS</fullName>
+                <default>false</default>
+                <label>PHD IMÓVEIS</label>
+            </value>
+            <value>
+                <fullName>PLATINUM PRIME IMOVEIS</fullName>
+                <default>false</default>
+                <label>PLATINUM PRIME IMOVEIS</label>
+            </value>
+            <value>
+                <fullName>Pleno Imobiliaria</fullName>
+                <default>false</default>
+                <label>Pleno Imobiliaria</label>
+            </value>
+            <value>
+                <fullName>Plus</fullName>
+                <default>false</default>
+                <label>Plus</label>
+            </value>
+            <value>
+                <fullName>Prabitar</fullName>
+                <default>false</default>
+                <label>Prabitar</label>
+            </value>
+            <value>
+                <fullName>Practical Soluções Imobiliárias</fullName>
+                <default>false</default>
+                <label>Practical Soluções Imobiliárias</label>
+            </value>
+            <value>
+                <fullName>Predial Minas Assessoria Imobiliária</fullName>
+                <default>false</default>
+                <label>Predial Minas Assessoria Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Prime Brokers</fullName>
+                <default>false</default>
+                <label>Prime Brokers</label>
+            </value>
+            <value>
+                <fullName>Privilégio Imóveis</fullName>
+                <default>false</default>
+                <label>Privilégio Imóveis</label>
+            </value>
+            <value>
+                <fullName>Provendas Imobiliária</fullName>
+                <default>false</default>
+                <label>Provendas Imobiliária</label>
+            </value>
+            <value>
+                <fullName>Quero Casa Imoveis</fullName>
+                <default>false</default>
+                <label>Quero Casa Imoveis</label>
+            </value>
+            <value>
+                <fullName>Quintal Carioca</fullName>
+                <default>false</default>
+                <label>Quintal Carioca</label>
+            </value>
+            <value>
+                <fullName>Raphael França Imóveis</fullName>
+                <default>false</default>
+                <label>Raphael França Imóveis</label>
+            </value>
+            <value>
+                <fullName>Rase Imóveis</fullName>
+                <default>false</default>
+                <label>Rase Imóveis</label>
+            </value>
+            <value>
+                <fullName>RCD Imóveis</fullName>
+                <default>false</default>
+                <label>RCD Imóveis</label>
+            </value>
+            <value>
+                <fullName>Real De Janeiro Negócios Imobiliários</fullName>
+                <default>false</default>
+                <label>Real De Janeiro Negócios Imobiliários</label>
+            </value>
+            <value>
+                <fullName>Real Imóveis RJ</fullName>
+                <default>false</default>
+                <label>Real Imóveis RJ</label>
+            </value>
+            <value>
+                <fullName>Rec Imóveis</fullName>
+                <default>false</default>
+                <label>Rec Imóveis</label>
+            </value>
+            <value>
+                <fullName>Rede 7 Imóveis</fullName>
+                <default>false</default>
+                <label>Rede 7 Imóveis</label>
+            </value>
+            <value>
+                <fullName>Refugios Urbanos</fullName>
+                <default>false</default>
+                <label>Refugios Urbanos</label>
+            </value>
+            <value>
+                <fullName>Residence Corretora De Imóveis</fullName>
+                <default>false</default>
+                <label>Residence Corretora De Imóveis</label>
+            </value>
+            <value>
+                <fullName>Revenda Imóvel</fullName>
+                <default>false</default>
+                <label>Revenda Imóvel</label>
+            </value>
+            <value>
+                <fullName>RFQ Imóveis</fullName>
+                <default>false</default>
+                <label>RFQ Imóveis</label>
+            </value>
+            <value>
+                <fullName>Rhodia Negócios Imobiliários</fullName>
+                <default>false</default>
+                <label>Rhodia Negócios Imobiliários</label>
+            </value>
+            <value>
+                <fullName>Rio Lar Imoveis</fullName>
+                <default>false</default>
+                <label>Rio Lar Imoveis</label>
+            </value>
+            <value>
+                <fullName>Ritt Negócios Imobiliárias</fullName>
+                <default>false</default>
+                <label>Ritt Negócios Imobiliárias</label>
+            </value>
+            <value>
+                <fullName>Rn6 Imóveis</fullName>
+                <default>false</default>
+                <label>Rn6 Imóveis</label>
+            </value>
+            <value>
+                <fullName>Rodrigo L. T. Dias Imóveis Eireli</fullName>
+                <default>false</default>
+                <label>Rodrigo L. T. Dias Imóveis Eireli</label>
+            </value>
+            <value>
+                <fullName>Ronaldo Farias Negocios Imobiliarios</fullName>
+                <default>false</default>
+                <label>Ronaldo Farias Negocios Imobiliarios</label>
+            </value>
+            <value>
+                <fullName>Rubra Imóveis</fullName>
+                <default>false</default>
+                <label>Rubra Imóveis</label>
+            </value>
+            <value>
+                <fullName>Rvss Corretagem De Imóveis Ltda</fullName>
+                <default>false</default>
+                <label>Rvss Corretagem De Imóveis Ltda</label>
+            </value>
+            <value>
+                <fullName>S.A imóveis Alphaville</fullName>
+                <default>false</default>
+                <label>S.A imóveis Alphaville</label>
+            </value>
+            <value>
+                <fullName>sabatinn imoveis</fullName>
+                <default>false</default>
+                <label>sabatinn imoveis</label>
+            </value>
+            <value>
+                <fullName>Santa Sales</fullName>
+                <default>false</default>
+                <label>Santa Sales</label>
+            </value>
+            <value>
+                <fullName>Santo Agostinho</fullName>
+                <default>false</default>
+                <label>Santo Agostinho</label>
+            </value>
+            <value>
+                <fullName>Santos E Mello Imóveis</fullName>
+                <default>false</default>
+                <label>Santos E Mello Imóveis</label>
+            </value>
+            <value>
+                <fullName>Sergio B Hamer Negócios Imobiliarios</fullName>
+                <default>false</default>
+                <label>Sergio B Hamer Negócios Imobiliarios</label>
+            </value>
+            <value>
+                <fullName>Smart Brokers</fullName>
+                <default>false</default>
+                <label>Smart Brokers</label>
+            </value>
+            <value>
+                <fullName>Soberana</fullName>
+                <default>false</default>
+                <label>Soberana</label>
+            </value>
+            <value>
+                <fullName>Sole Imoveis Jundiai</fullName>
+                <default>false</default>
+                <label>Sole Imoveis Jundiai</label>
+            </value>
+            <value>
+                <fullName>Sousa Norte Imóveis</fullName>
+                <default>false</default>
+                <label>Sousa Norte Imóveis</label>
+            </value>
+            <value>
+                <fullName>SP INVESTIMENTOS</fullName>
+                <default>false</default>
+                <label>SP INVESTIMENTOS</label>
+            </value>
+            <value>
+                <fullName>Special Imóveis</fullName>
+                <default>false</default>
+                <label>Special Imóveis</label>
+            </value>
+            <value>
+                <fullName>SPIN Vendas</fullName>
+                <default>false</default>
+                <label>SPIN Vendas</label>
+            </value>
+            <value>
+                <fullName>Stk Imóveis</fullName>
+                <default>false</default>
+                <label>Stk Imóveis</label>
+            </value>
+            <value>
+                <fullName>T&amp;Co. Imóveis</fullName>
+                <default>false</default>
+                <label>T&amp;Co. Imóveis</label>
+            </value>
+            <value>
+                <fullName>TA imoveis</fullName>
+                <default>false</default>
+                <label>TA imoveis</label>
+            </value>
+            <value>
+                <fullName>Taissei</fullName>
+                <default>false</default>
+                <label>Taissei</label>
+            </value>
+            <value>
+                <fullName>Titanio Imóveis &amp; Credito Imobiliário</fullName>
+                <default>false</default>
+                <label>Titanio Imóveis &amp; Credito Imobiliário</label>
+            </value>
+            <value>
+                <fullName>Torres E Picolomini</fullName>
+                <default>false</default>
+                <label>Torres E Picolomini</label>
+            </value>
+            <value>
+                <fullName>Trindade Imóveis</fullName>
+                <default>false</default>
+                <label>Trindade Imóveis</label>
+            </value>
+            <value>
+                <fullName>Union SP</fullName>
+                <default>false</default>
+                <label>Union SP</label>
+            </value>
+            <value>
+                <fullName>UNNITA</fullName>
+                <default>false</default>
+                <label>UNNITA</label>
+            </value>
+            <value>
+                <fullName>Valence Imoveis</fullName>
+                <default>false</default>
+                <label>Valence Imoveis</label>
+            </value>
+            <value>
+                <fullName>Vanicasa Imóveis</fullName>
+                <default>false</default>
+                <label>Vanicasa Imóveis</label>
+            </value>
+            <value>
+                <fullName>VIDA IMOVEIS LTDA EPP</fullName>
+                <default>false</default>
+                <label>VIDA IMOVEIS LTDA EPP</label>
+            </value>
+            <value>
+                <fullName>Vieira Imóveis</fullName>
+                <default>false</default>
+                <label>Vieira Imóveis</label>
+            </value>
+            <value>
+                <fullName>Villa Bella Imoveis</fullName>
+                <default>false</default>
+                <label>Villa Bella Imoveis</label>
+            </value>
+            <value>
+                <fullName>Villalobos Imóveis</fullName>
+                <default>false</default>
+                <label>Villalobos Imóveis</label>
+            </value>
+            <value>
+                <fullName>Vista Livre</fullName>
+                <default>false</default>
+                <label>Vista Livre</label>
+            </value>
+            <value>
+                <fullName>Vital</fullName>
+                <default>false</default>
+                <label>Vital</label>
+            </value>
+            <value>
+                <fullName>Vlz Imóveis</fullName>
+                <default>false</default>
+                <label>Vlz Imóveis</label>
+            </value>
+            <value>
+                <fullName>Volare Imóveis</fullName>
+                <default>false</default>
+                <label>Volare Imóveis</label>
+            </value>
+            <value>
+                <fullName>Why Imóveis</fullName>
+                <default>false</default>
+                <label>Why Imóveis</label>
+            </value>
+            <value>
+                <fullName>Wn Investimentos</fullName>
+                <default>false</default>
+                <label>Wn Investimentos</label>
+            </value>
+            <value>
+                <fullName>Yes Abc Imoveis</fullName>
+                <default>false</default>
+                <label>Yes Abc Imoveis</label>
+            </value>
+            <value>
+                <fullName>Zavatta Imóveis</fullName>
+                <default>false</default>
+                <label>Zavatta Imóveis</label>
+            </value>
+            <value>
+                <fullName>Zelo Imóveis</fullName>
+                <default>false</default>
+                <label>Zelo Imóveis</label>
+            </value>
+            <value>
+                <fullName>Zona Sul Flats</fullName>
+                <default>false</default>
+                <label>Zona Sul Flats</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Parceira 1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Imobiliária Parceira 1</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Parceira 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Imobiliária Parceira 2</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Parceira 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Imobiliária Parceira 3</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Parceira 4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Imobiliária Parceira 4</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Parceira 5</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Imobiliária Parceira 5</label>
+            </value>
+            <value>
+                <fullName>Imobiliária Parceira 6</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Imobiliária Parceira 6</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

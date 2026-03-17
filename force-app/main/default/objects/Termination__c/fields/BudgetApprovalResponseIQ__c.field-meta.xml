@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BudgetApprovalResponseIQ__c</fullName>
+    <label>Resposta do Budget Approval IQ</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aprovou</fullName>
+                <default>false</default>
+                <label>Aprovou</label>
+            </value>
+            <value>
+                <fullName>Não aprovou</fullName>
+                <default>false</default>
+                <label>Não aprovou</label>
+            </value>
+            <value>
+                <fullName>Não respondeu</fullName>
+                <default>false</default>
+                <label>Não respondeu</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

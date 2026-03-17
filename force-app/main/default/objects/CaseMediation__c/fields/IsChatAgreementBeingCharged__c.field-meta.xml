@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsChatAgreementBeingCharged__c</fullName>
+    <description>A record of items that had already been agreed upon by the parties in the chat, but which are still listed as pending charges.</description>
+    <label>Algum acordo em chat PP/IQ sendo cobrado</label>
+    <length>5000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

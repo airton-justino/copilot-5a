@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_ALIENATION_RETURN_STATUS</fullName>
+    <active>true</active>
+    <description>Você não tem permissão para retroceder o status. Apenas avançar no fluxo.</description>
+    <errorConditionFormula>AND(
+CONTAINS($Profile.Name, &quot;CRN&quot;),
+
+CASE(TEXT(AlienationStatus__c),
+&quot;NOT_STARTED&quot;, 1,
+&quot;INVOICE_SENT_TO_BUYER&quot;, 2,
+&quot;PAYMENT_MADE&quot;, 3,
+&quot;RECEIPT_OF_SETTLEMENT_RECEIVED_BY_CRN&quot;, 4,
+0
+) &lt;
+
+CASE(TEXT(PRIORVALUE(AlienationStatus__c)),
+&quot;NOT_STARTED&quot;, 1,
+&quot;INVOICE_SENT_TO_BUYER&quot;, 2,
+&quot;PAYMENT_MADE&quot;, 3,
+&quot;RECEIPT_OF_SETTLEMENT_RECEIVED_BY_CRN&quot;, 4,
+0
+)
+)</errorConditionFormula>
+    <errorMessage>Você não tem permissão para retroceder o status. Apenas avançar no fluxo.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrackFields__c</fullName>
+    <description>Campos observados na Trigger para ativação do evento de Change Data Capture (integração da modificação)</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>TrackFields</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

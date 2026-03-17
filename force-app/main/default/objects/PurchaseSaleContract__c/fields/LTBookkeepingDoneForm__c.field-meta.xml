@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LTBookkeepingDoneForm__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+CCVCompletionDate__c = null || ISBLANK(CCVCompletionDate__c), (TODAY() - DATEVALUE(CCVSignedAt__c)), (CCVCompletionDate__c - DATEVALUE(CCVSignedAt__c))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>LT de CASH</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

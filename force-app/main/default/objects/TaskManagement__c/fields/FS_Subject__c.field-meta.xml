@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_Subject__c</fullName>
+    <label>Assunto</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>[BY] Realizar primeiro contato do onboarding</fullName>
+                <default>false</default>
+                <label>[BY] Realizar primeiro contato do onboarding</label>
+            </value>
+            <value>
+                <fullName>[BY] Formalizar o contato do onboarding por WhatsApp e registrar informações</fullName>
+                <default>false</default>
+                <label>[BY] Formalizar o contato do onboarding por WhatsApp e registrar informações</label>
+            </value>
+            <value>
+                <fullName>[BY] Enviar WhatsApp pedindo horário para realizar o onboarding</fullName>
+                <default>false</default>
+                <label>[BY] Enviar WhatsApp pedindo horário para realizar o onboarding</label>
+            </value>
+            <value>
+                <fullName>[BY] Realizar segundo contato do onboarding</fullName>
+                <default>false</default>
+                <label>[BY] Realizar segundo contato do onboarding</label>
+            </value>
+            <value>
+                <fullName>[BY] Realizar terceiro contato do onboarding</fullName>
+                <default>false</default>
+                <label>[BY] Realizar terceiro contato do onboarding</label>
+            </value>
+            <value>
+                <fullName>[BY] Enviar email formalizando o onboarding</fullName>
+                <default>false</default>
+                <label>[BY] Enviar email formalizando o onboarding</label>
+            </value>
+            <value>
+                <fullName>[SL] Realizar primeiro contato do onboarding</fullName>
+                <default>false</default>
+                <label>[SL] Realizar primeiro contato do onboarding</label>
+            </value>
+            <value>
+                <fullName>[SL] Formalizar o contato do onboarding por WhatsApp e registrar informações</fullName>
+                <default>false</default>
+                <label>[SL] Formalizar o contato do onboarding por WhatsApp e registrar informações</label>
+            </value>
+            <value>
+                <fullName>[SL] Enviar WhatsApp pedindo horário para realizar o onboarding</fullName>
+                <default>false</default>
+                <label>[SL] Enviar WhatsApp pedindo horário para realizar o onboarding</label>
+            </value>
+            <value>
+                <fullName>[SL] Realizar segundo contato do onboarding</fullName>
+                <default>false</default>
+                <label>[SL] Realizar segundo contato do onboarding</label>
+            </value>
+            <value>
+                <fullName>[SL] Realizar terceiro contato do onboarding</fullName>
+                <default>false</default>
+                <label>[SL] Realizar terceiro contato do onboarding</label>
+            </value>
+            <value>
+                <fullName>[SL] Enviar email formalizando o onboarding</fullName>
+                <default>false</default>
+                <label>[SL] Enviar email formalizando o onboarding</label>
+            </value>
+            <value>
+                <fullName>[SL] Comunicar o que o restante da Corretagem é paga por ele no final do processo</fullName>
+                <default>false</default>
+                <label>[SL] Comunicar o que o restante da Corretagem é paga por ele no final do processo</label>
+            </value>
+            <value>
+                <fullName>Conferir com BY se pagou o sinal</fullName>
+                <default>false</default>
+                <label>[BY] Conferir com BY se ele pagou o sinal e solicitar comprovante</label>
+            </value>
+            <value>
+                <fullName>Cobrar BY de pagamento do sinal</fullName>
+                <default>false</default>
+                <label>[BY] Cobrar BY de pagamento do sinal</label>
+            </value>
+            <value>
+                <fullName>Preencher Cognito para Finance</fullName>
+                <default>false</default>
+                <label>Preencher formulário de TED para time Financeiro</label>
+            </value>
+            <value>
+                <fullName>Informar para SL que BY pagou o sinal e que esse pagamento é do QuintoAndar</fullName>
+                <default>false</default>
+                <label>Informar para SL que BY pagou o sinal e que esse pagamento é do QuintoAndar</label>
+            </value>
+            <value>
+                <fullName>[BY] Fazer contato para falar que DD está em andamento</fullName>
+                <default>false</default>
+                <label>[BY] Fazer contato para falar que DD está em andamento</label>
+            </value>
+            <value>
+                <fullName>[SL] Fazer contato para falar que DD está em andamento</fullName>
+                <default>false</default>
+                <label>[SL] Fazer contato para falar que DD está em andamento</label>
+            </value>
+            <value>
+                <fullName>[BY] Fazer contato para falar que DD ainda está em andamento</fullName>
+                <default>false</default>
+                <label>[BY] Fazer contato para falar que DD ainda está em andamento</label>
+            </value>
+            <value>
+                <fullName>[BY] Explicar sobre aceite tácito da DD</fullName>
+                <default>false</default>
+                <label>[BY] Explicar sobre aceite tácito da DD</label>
+            </value>
+            <value>
+                <fullName>[SL] Explicar sobre aceite tácito da DD</fullName>
+                <default>false</default>
+                <label>[SL] Explicar sobre aceite tácito da DD</label>
+            </value>
+            <value>
+                <fullName>Solicitar ajuda de LegalOps para esclarecer dúvidas</fullName>
+                <default>false</default>
+                <label>Solicitar ajuda de LegalOps para esclarecer dúvidas</label>
+            </value>
+            <value>
+                <fullName>Entender com LegalOps o motivo de ainda estar em andamento</fullName>
+                <default>false</default>
+                <label>Entender com LegalOps o motivo de ainda estar em andamento</label>
+            </value>
+            <value>
+                <fullName>Entender com LegalOps o motivo do atraso</fullName>
+                <default>false</default>
+                <label>Entender com LegalOps o motivo do atraso</label>
+            </value>
+            <value>
+                <fullName>[SL] Orientar sobre a entrega de chaves conforme CCV e perguntar se já tem uma data</fullName>
+                <default>false</default>
+                <label>[SL] Orientar sobre a entrega de chaves conforme CCV e perguntar se já tem uma data</label>
+            </value>
+            <value>
+                <fullName>[BY] Comunicar BY sobre a entrega das chaves, confirmando data de previsão dada pelo SL</fullName>
+                <default>false</default>
+                <label>[BY] Comunicar BY sobre a entrega das chaves, confirmando data de previsão dada pelo SL</label>
+            </value>
+            <value>
+                <fullName>[BY] Confirmar recebimento das chaves</fullName>
+                <default>false</default>
+                <label>[BY] Confirmar recebimento das chaves</label>
+            </value>
+            <value>
+                <fullName>Orientar BY sobre o pagamento do saldo de acordo com CCV</fullName>
+                <default>false</default>
+                <label>[BY] Orientar BY sobre o pagamento do saldo de acordo com CCV</label>
+            </value>
+            <value>
+                <fullName>Atualizar SL sobre status do recebimento do Saldo de acordo com CCV</fullName>
+                <default>false</default>
+                <label>[SL] Atualizar SL sobre status do recebimento do Saldo de acordo com CCV</label>
+            </value>
+            <value>
+                <fullName>Solicitar atualização do caso para o cartório ou abrir anomalia</fullName>
+                <default>false</default>
+                <label>Solicitar atualização do caso para o cartório ou abrir anomalia</label>
+            </value>
+            <value>
+                <fullName>Conferir anotações do CRN para entender o motivo do atraso</fullName>
+                <default>false</default>
+                <label>Conferir anotações do CRN para entender o motivo do atraso</label>
+            </value>
+            <value>
+                <fullName>Cobrar cliente sobre o envio da documentação para o CRN</fullName>
+                <default>false</default>
+                <label>Cobrar cliente sobre o envio da documentação para o CRN</label>
+            </value>
+            <value>
+                <fullName>[BY] Orientar o pagamento do ITBI</fullName>
+                <default>false</default>
+                <label>[BY] Orientar o pagamento do ITBI</label>
+            </value>
+            <value>
+                <fullName>[SL] Atualizar sobre status do ITBI</fullName>
+                <default>false</default>
+                <label>[SL] Atualizar sobre status do ITBI</label>
+            </value>
+            <value>
+                <fullName>[SL] Informar que o BY pagou o ITBI</fullName>
+                <default>false</default>
+                <label>[SL] Informar que o BY pagou o ITBI</label>
+            </value>
+            <value>
+                <fullName>Solicitar atualização do caso para o CRN</fullName>
+                <default>false</default>
+                <label>Solicitar atualização do caso para o CRN</label>
+            </value>
+            <value>
+                <fullName>Orientar cliente para destravar o processo</fullName>
+                <default>false</default>
+                <label>Orientar cliente para destravar o processo</label>
+            </value>
+            <value>
+                <fullName>Ajudar o cartório a tracionar a aprovação da minuta com vendedor ou comprador</fullName>
+                <default>false</default>
+                <label>Ajudar o cartório a tracionar a aprovação da minuta com vendedor ou comprador</label>
+            </value>
+            <value>
+                <fullName>[BY] Comemorar o fim da etapa e perguntar se entende os próximos passos</fullName>
+                <default>false</default>
+                <label>[BY] Comemorar o fim da etapa e perguntar se entende os próximos passos</label>
+            </value>
+            <value>
+                <fullName>[SL] Comemorar o fim da etapa e perguntar se entende os próximos passos</fullName>
+                <default>false</default>
+                <label>[SL] Comemorar o fim da etapa e perguntar se entende os próximos passos</label>
+            </value>
+            <value>
+                <fullName>Conferir status do Registro no Registradores</fullName>
+                <default>false</default>
+                <label>Conferir status do Registro no Registradores</label>
+            </value>
+            <value>
+                <fullName>Avisar o CRN que o registro já foi concluído</fullName>
+                <default>false</default>
+                <label>Avisar o CRN que o registro já foi concluído</label>
+            </value>
+            <value>
+                <fullName>Avisar o CRN que o registro tem nota de exigência e pedir para ele orientar os clientes</fullName>
+                <default>false</default>
+                <label>Avisar o CRN que o registro tem nota de exigência e pedir para ele orientar os clientes</label>
+            </value>
+            <value>
+                <fullName>[BY] Falar com comprador que estou acompanhando o registro e que ainda está em andamento</fullName>
+                <default>false</default>
+                <label>[BY] Falar com comprador que estou acompanhando o registro e que ainda está em andamento</label>
+            </value>
+            <value>
+                <fullName>[SL] Falar com vendedor que estou acompanhando o registro e que ainda está em andamento</fullName>
+                <default>false</default>
+                <label>[SL] Falar com vendedor que estou acompanhando o registro e que ainda está em andamento</label>
+            </value>
+            <value>
+                <fullName>[BY] Enviar mensagem de finalização do processo para comprador</fullName>
+                <default>false</default>
+                <label>[BY] Enviar mensagem de finalização do processo para comprador</label>
+            </value>
+            <value>
+                <fullName>[SL] Enviar mensagem de finalização do processo para vendedor</fullName>
+                <default>false</default>
+                <label>[SL] Enviar mensagem de finalização do processo para vendedor</label>
+            </value>
+            <value>
+                <fullName>Encerrar o ticket de email no Zendesk</fullName>
+                <default>false</default>
+                <label>Encerrar o ticket de email no Zendesk</label>
+            </value>
+            <value>
+                <fullName>Conferir coluna de Observação da planilha para ver se o atraso é devido</fullName>
+                <default>false</default>
+                <label>Conferir coluna de Observação da planilha para ver se o atraso é devido</label>
+            </value>
+            <value>
+                <fullName>Ajudar o cartório a tracionar a assinatura da escritura com vendedor ou comprado</fullName>
+                <default>false</default>
+                <label>Ajudar o cartório a tracionar a assinatura da escritura com vendedor ou comprado</label>
+            </value>
+            <value>
+                <fullName>ITBI: Conferir anotações do CRN para entender porque ITBI não foi emitido</fullName>
+                <default>false</default>
+                <label>ITBI: Conferir anotações do CRN para entender porque ITBI não foi emitido</label>
+            </value>
+            <value>
+                <fullName>[BY] Confirmar o recebimento da minuta com comprador</fullName>
+                <default>false</default>
+                <label>[BY] Confirmar o recebimento da minuta com comprador</label>
+            </value>
+            <value>
+                <fullName>[SL] Confirmar o recebimento da minuta com vendedor</fullName>
+                <default>false</default>
+                <label>[SL] Confirmar o recebimento da minuta com vendedor</label>
+            </value>
+            <value>
+                <fullName>[BY] Entender com comprador se vai seguir com nosso cartório parceiro ou não</fullName>
+                <default>false</default>
+                <label>[BY] Entender com comprador se vai seguir com nosso cartório parceiro ou não</label>
+            </value>
+            <value>
+                <fullName>[SL] Falar com vendedor que o comprador ainda não definiu qual CRN vai seguir</fullName>
+                <default>false</default>
+                <label>[SL] Falar com vendedor que o comprador ainda não definiu qual CRN vai seguir</label>
+            </value>
+            <value>
+                <fullName>(CRI) Orientar cliente para destravar o processo</fullName>
+                <default>false</default>
+                <label>(CRI) Orientar cliente para destravar o processo</label>
+            </value>
+            <value>
+                <fullName>(CRI) Solicitar atualização do caso para o CRN</fullName>
+                <default>false</default>
+                <label>(CRI) Solicitar atualização do caso para o CRN</label>
+            </value>
+            <value>
+                <fullName>Conferir anotações do CRN para entender porque assinatura não foi agendada</fullName>
+                <default>false</default>
+                <label>Conferir anotações do CRN para entender porque assinatura não foi agendada</label>
+            </value>
+            <value>
+                <fullName>ITBI: Conferir anotações do CRN para entender porque ITBI não foi pago</fullName>
+                <default>false</default>
+                <label>ITBI: Conferir anotações do CRN para entender porque ITBI não foi pago</label>
+            </value>
+            <value>
+                <fullName>[SL] 1º contato: Entender com vendedor se já iniciou a averbação</fullName>
+                <default>false</default>
+                <label>[SL] 1º contato: Entender com vendedor se já iniciou a averbação</label>
+            </value>
+            <value>
+                <fullName>[SL] Falar com vendedor que a averbação foi finalizada</fullName>
+                <default>false</default>
+                <label>[SL] Falar com vendedor que a averbação foi finalizada</label>
+            </value>
+            <value>
+                <fullName>[BY] Comunicar buyer que você está em contato com o seller para garantir a averbação da matrícula</fullName>
+                <default>false</default>
+                <label>[BY] Comunicar buyer que você está em contato com o seller para garantir a averbação da matrícula</label>
+            </value>
+            <value>
+                <fullName>[SL] 2º contato: Lembrar seller que o prazo para solicitar a averbação está próxima</fullName>
+                <default>false</default>
+                <label>[SL] 2º contato: Lembrar seller que o prazo para solicitar a averbação está próxima</label>
+            </value>
+            <value>
+                <fullName>[SL] 3º contato: Alertar seller que é o último prazo para a averbação da matrícula</fullName>
+                <default>false</default>
+                <label>[SL] 3º contato: Alertar seller que é o último prazo para a averbação da matrícula</label>
+            </value>
+            <value>
+                <fullName>[SL] Alertar seller que o prazo para averbar a matrícula já passou</fullName>
+                <default>false</default>
+                <label>[SL] Alertar seller que o prazo para averbar a matrícula já passou</label>
+            </value>
+            <value>
+                <fullName>Verificar status da averbação no Registradores ou site do cartório</fullName>
+                <default>false</default>
+                <label>Verificar status da averbação no Registradores ou site do cartório</label>
+            </value>
+            <value>
+                <fullName>[BY] Falar com comprador que você está acompanhando a averbação e ela está em andamento</fullName>
+                <default>false</default>
+                <label>[BY] Falar com comprador que você está acompanhando a averbação e ela está em andamento</label>
+            </value>
+            <value>
+                <fullName>[SL] Falar com vendedor que você está acompanhando a averbação e ela está em andamento</fullName>
+                <default>false</default>
+                <label>[SL] Falar com vendedor que você está acompanhando a averbação e ela está em andamento</label>
+            </value>
+            <value>
+                <fullName>[BY] Falar com comprador que a averbação foi finalizada</fullName>
+                <default>false</default>
+                <label>[BY] Falar com comprador que a averbação foi finalizada</label>
+            </value>
+            <value>
+                <fullName>[BY] {buyer_name}: realizar onboarding</fullName>
+                <default>false</default>
+                <label>[BY] {buyer_name}: realizar onboarding</label>
+            </value>
+            <value>
+                <fullName>[SL] {seller_name}: realizar onboarding</fullName>
+                <default>false</default>
+                <label>[SL] {seller_name}: realizar onboarding</label>
+            </value>
+            <value>
+                <fullName>[SL] {seller_name}: realizar onboarding por email</fullName>
+                <default>false</default>
+                <label>[SL] {seller_name}: realizar onboarding por email</label>
+            </value>
+            <value>
+                <fullName>[BY] {buyer_name}: realizar onboarding por email</fullName>
+                <default>false</default>
+                <label>[BY] {buyer_name}: realizar onboarding por email</label>
+            </value>
+            <value>
+                <fullName>Checar anotações do CRN para entender o atraso do envio do boleto para o comprador</fullName>
+                <default>false</default>
+                <label>Checar anotações do CRN para entender o atraso do envio do boleto para o comprador</label>
+            </value>
+            <value>
+                <fullName>[SL] Orientar vendedor sobre importância do envio do boleto para o comprador pagar</fullName>
+                <default>false</default>
+                <label>[SL] Orientar vendedor sobre importância do envio do boleto para o comprador pagar</label>
+            </value>
+            <value>
+                <fullName>Checar anotações do CRN para entender o atraso do pagamento do boleto</fullName>
+                <default>false</default>
+                <label>Checar anotações do CRN para entender o atraso do pagamento do boleto</label>
+            </value>
+            <value>
+                <fullName>[BY] Orientar comprador sobre importância do pagamento do boleto</fullName>
+                <default>false</default>
+                <label>[BY] Orientar comprador sobre importância do pagamento do boleto</label>
+            </value>
+            <value>
+                <fullName>Checar anotações do CRN para entender o atraso do recebimento do Termo de Quitação</fullName>
+                <default>false</default>
+                <label>Checar anotações do CRN para entender o atraso do recebimento do Termo de Quitação</label>
+            </value>
+            <value>
+                <fullName>[SL] Orientar vendedor sobre importância do envio do Termo de Quitação para CRN</fullName>
+                <default>false</default>
+                <label>[SL] Orientar vendedor sobre importância do envio do Termo de Quitação para CRN</label>
+            </value>
+            <value>
+                <fullName>Acompanhar ticket de Aditivo/Distrato no Zendesk</fullName>
+                <default>false</default>
+                <label>Acompanhar ticket de Aditivo/Distrato no Zendesk</label>
+            </value>
+            <value>
+                <fullName>[SL] Pedir para vendedor o contato da imobiliária externa</fullName>
+                <default>false</default>
+                <label>[SL] Pedir para vendedor o contato da imobiliária externa</label>
+            </value>
+            <value>
+                <fullName>[BY] Orientar comprador sobre troca de PP e denúncia de locação para entrega de chaves com a imobiliária externa</fullName>
+                <default>false</default>
+                <label>[BY] Orientar comprador sobre troca de PP e denúncia de locação para entrega de chaves com a imobiliária externa</label>
+            </value>
+            <value>
+                <fullName>[BY] Orientar sobre Troca de Proprietário e entender se vai querer Denúncia da Locação</fullName>
+                <default>false</default>
+                <label>[BY] Orientar sobre Troca de Proprietário e entender se vai querer Denúncia da Locação</label>
+            </value>
+            <value>
+                <fullName>[SL] Informar SL que a Troca de PP será solicitada ao time de Aluguel</fullName>
+                <default>false</default>
+                <label>[SL] Informar SL que a Troca de PP será solicitada ao time de Aluguel</label>
+            </value>
+            <value>
+                <fullName>Abrir tarefa para enviar Aditivo de Troca PP para Comprador e Vendedor</fullName>
+                <default>false</default>
+                <label>Abrir tarefa para enviar Aditivo de Troca PP para Comprador e Vendedor</label>
+            </value>
+            <value>
+                <fullName>Checar no ticket de Troca de PP se Aditivo foi enviado</fullName>
+                <default>false</default>
+                <label>Checar no ticket de Troca de PP se Aditivo foi enviado</label>
+            </value>
+            <value>
+                <fullName>[BY] Confirmar com comprador se aditivo de Troca de PP foi recebido e informar canal de atendimento de Aluguel</fullName>
+                <default>false</default>
+                <label>[BY] Confirmar com comprador se aditivo de Troca de PP foi recebido e informar canal de atendimento de Aluguel</label>
+            </value>
+            <value>
+                <fullName>Cobrar no ticket o envio da denúncia de locação e acompanhar se clientes receberam</fullName>
+                <default>false</default>
+                <label>Cobrar no ticket o envio da denúncia de locação e acompanhar se clientes receberam</label>
+            </value>
+            <value>
+                <fullName>[SL] Confirmar com vendedor se aditivo de Troca de PP foi recebido e informar canal de atendimento de Aluguel</fullName>
+                <default>false</default>
+                <label>[SL] Confirmar com vendedor se aditivo de Troca de PP foi recebido e informar canal de atendimento de Aluguel</label>
+            </value>
+            <value>
+                <fullName>Cobrar no ticket o envio do aditibo da troca de pp e acompanhar se clientes receberam</fullName>
+                <default>false</default>
+                <label>Cobrar no ticket o envio do aditibo da troca de pp e acompanhar se clientes receberam</label>
+            </value>
+            <value>
+                <fullName>Marcar analista de Aluguel solicitando o envio da Troca de Proprietário</fullName>
+                <default>false</default>
+                <label>Marcar analista de Aluguel solicitando o envio da Troca de Proprietário</label>
+            </value>
+            <value>
+                <fullName>[SL] Confirmar com vendedor se enviou o DP e reforçar a importância. Se já enviou, atualizar o Vendas</fullName>
+                <default>false</default>
+                <label>[SL] Confirmar com vendedor se enviou o DP e reforçar a importância. Se já enviou, atualizar o Vendas</label>
+            </value>
+            <value>
+                <fullName>Marcar analista e liderança no ticket do Zendesk e reforçar o envio do DP</fullName>
+                <default>false</default>
+                <label>Marcar analista e liderança no ticket do Zendesk e reforçar o envio do DP</label>
+            </value>
+            <value>
+                <fullName>Entender porque o DP ainda não foi enviado e cobrar responsáveis</fullName>
+                <default>false</default>
+                <label>Entender porque o DP ainda não foi enviado e cobrar responsáveis</label>
+            </value>
+            <value>
+                <fullName>[SL] Informar que o DP já foi enviado para o inquilino, o prazo e que estamos acompanhando</fullName>
+                <default>false</default>
+                <label>[SL] Informar que o DP já foi enviado para o inquilino, o prazo e que estamos acompanhando</label>
+            </value>
+            <value>
+                <fullName>[BY] Informar que o DP já foi enviado para o inquilino, o prazo e que estamos acompanhando</fullName>
+                <default>false</default>
+                <label>[BY] Informar que o DP já foi enviado para o inquilino, o prazo e que estamos acompanhando</label>
+            </value>
+            <value>
+                <fullName>Verificar status de DP no Zendesk</fullName>
+                <default>false</default>
+                <label>Verificar status de DP no Zendesk</label>
+            </value>
+            <value>
+                <fullName>[SL] Perguntar ao vendedor se inquilino já respondeu Direito de Preferência. Se sim, atualizar o Vendas</fullName>
+                <default>false</default>
+                <label>[SL] Perguntar ao vendedor se inquilino já respondeu Direito de Preferência. Se sim, atualizar o Vendas</label>
+            </value>
+            <value>
+                <fullName>Solicitar distrato para time de Legal por causa do Direito de Preferência exercido</fullName>
+                <default>false</default>
+                <label>Solicitar distrato para time de Legal por causa do Direito de Preferência exercido</label>
+            </value>
+            <value>
+                <fullName>[BY] Informar que IQ não quer comprar o imóvel e o processo vai seguir</fullName>
+                <default>false</default>
+                <label>[BY] Informar que IQ não quer comprar o imóvel e o processo vai seguir</label>
+            </value>
+            <value>
+                <fullName>[SL] Informar que IQ não quer comprar o imóvel e o processo vai seguir</fullName>
+                <default>false</default>
+                <label>[SL] Informar que IQ não quer comprar o imóvel e o processo vai seguir</label>
+            </value>
+            <value>
+                <fullName>[SL] Orientar vendedor sobre Direito de Preferência e pedir para enviar print da mensagem para inquilino</fullName>
+                <default>false</default>
+                <label>[SL] Orientar vendedor sobre Direito de Preferência e pedir para enviar print da mensagem para inquilino</label>
+            </value>
+            <value>
+                <fullName>Anexar aditivo para o CRN</fullName>
+                <default>false</default>
+                <label>Anexar aditivo para o CRN</label>
+            </value>
+            <value>
+                <fullName>[BY] Comunicar comprador que vendedor solicitou aditivo/distrato</fullName>
+                <default>false</default>
+                <label>[BY] Comunicar comprador que vendedor solicitou aditivo/distrato</label>
+            </value>
+            <value>
+                <fullName>[BY] Enviar e-mail e whatsapp para comprador agradecendo e encerrando atendimento</fullName>
+                <default>false</default>
+                <label>[BY] Enviar e-mail e whatsapp para comprador agradecendo e encerrando atendimento</label>
+            </value>
+            <value>
+                <fullName>[SL] Comunicar vendedor que comprador solicitou aditivo/distrato</fullName>
+                <default>false</default>
+                <label>[SL] Comunicar vendedor que comprador solicitou aditivo/distrato</label>
+            </value>
+            <value>
+                <fullName>[SL] Enviar e-mail e whatsapp para vendedor agradecendo e encerrando atendimento</fullName>
+                <default>false</default>
+                <label>[SL] Enviar e-mail e whatsapp para vendedor agradecendo e encerrando atendimento</label>
+            </value>
+            <value>
+                <fullName>[BY] Reforçar o passo a passo da denúncia de locação</fullName>
+                <default>false</default>
+                <label>[BY] Reforçar o passo a passo da denúncia de locação</label>
+            </value>
+            <value>
+                <fullName>Abrir formulário solicitando o envio da Denúncia de Locação</fullName>
+                <default>false</default>
+                <label>Abrir formulário solicitando o envio da Denúncia de Locação</label>
+            </value>
+            <value>
+                <fullName>Checar no ticket se a Denúncia foi enviada para o Inquilino</fullName>
+                <default>false</default>
+                <label>Checar no ticket se a Denúncia foi enviada para o Inquilino</label>
+            </value>
+            <value>
+                <fullName>[BY] Comunicar comprador a data de envio da Denúncia de Locação e informar canal de atendimento de Aluguel para recebimento das chaves</fullName>
+                <default>false</default>
+                <label>[BY] Comunicar comprador a data de envio da Denúncia de Locação e informar canal de atendimento de Aluguel para recebimento das chaves</label>
+            </value>
+            <value>
+                <fullName>Marcar analista de Aluguel solicitando o envio da Denúncia de Locação</fullName>
+                <default>false</default>
+                <label>Marcar analista de Aluguel solicitando o envio da Denúncia de Locação</label>
+            </value>
+            <value>
+                <fullName>Entrar em contato com o EN e informar a falta de pagamento do Sinal</fullName>
+                <default>false</default>
+                <label>Entrar em contato com o EN e informar a falta de pagamento do Sinal</label>
+            </value>
+            <value>
+                <fullName>[SL] Gerar link de pagamento da corretagem e enviar para vendedor</fullName>
+                <default>false</default>
+                <label>[SL] Gerar link de pagamento da corretagem e enviar para vendedor</label>
+            </value>
+            <value>
+                <fullName>[BY] Enviar guia de ITBI por email para comprador</fullName>
+                <default>false</default>
+                <label>[BY] Enviar guia de ITBI por email para comprador</label>
+            </value>
+            <value>
+                <fullName>[BY] Comunicar comprador que a guia de ITBI foi enviada por email</fullName>
+                <default>false</default>
+                <label>[BY] Comunicar comprador que a guia de ITBI foi enviada por email</label>
+            </value>
+            <value>
+                <fullName>[SL] Comunicar vendedor que a guia de ITBI foi emitida e enviada para o comprador</fullName>
+                <default>false</default>
+                <label>[SL] Comunicar vendedor que a guia de ITBI foi emitida e enviada para o comprador</label>
+            </value>
+            <value>
+                <fullName>[BY] Orientar comprador a emitir a guia de ITBI conforme Prefeitura</fullName>
+                <default>false</default>
+                <label>[BY] Orientar comprador a emitir a guia de ITBI conforme Prefeitura</label>
+            </value>
+            <value>
+                <fullName>[BY] Checar se comprador pagou a guia de ITBI. Caso negativo, reforçar data de vencimento</fullName>
+                <default>false</default>
+                <label>[BY] Checar se comprador pagou a guia de ITBI. Caso negativo, reforçar data de vencimento</label>
+            </value>
+            <value>
+                <fullName>[BY] Informar que o boleto venceu, falar sobre juros e questionar a data prevista de pagamento</fullName>
+                <default>false</default>
+                <label>[BY] Informar que o boleto venceu, falar sobre juros e questionar a data prevista de pagamento</label>
+            </value>
+            <value>
+                <fullName>[BY] Orientar comprador a reemitir a guia de ITBI conforme Prefeitura</fullName>
+                <default>false</default>
+                <label>[BY] Orientar comprador a reemitir a guia de ITBI conforme Prefeitura</label>
+            </value>
+            <value>
+                <fullName>[BY] Enviar nova guia de ITBI por email para comprador</fullName>
+                <default>false</default>
+                <label>[BY] Enviar nova guia de ITBI por email para comprador</label>
+            </value>
+            <value>
+                <fullName>[BY] Comunicar comprador que a nova guia de ITBI foi enviada por email</fullName>
+                <default>false</default>
+                <label>[BY] Comunicar comprador que a nova guia de ITBI foi enviada por email</label>
+            </value>
+            <value>
+                <fullName>[SL] Comunicar vendedor que comprador já realizou o pagamento de ITBI</fullName>
+                <default>false</default>
+                <label>[SL] Comunicar vendedor que comprador já realizou o pagamento de ITBI</label>
+            </value>
+            <value>
+                <fullName>[BY] Perguntar para comprador se já recebeu a matrícula. Se não recebeu, perguntar data combinada com CRN</fullName>
+                <default>false</default>
+                <label>[BY] Perguntar para comprador se já recebeu a matrícula. Se não recebeu, perguntar data combinada com CRN</label>
+            </value>
+            <value>
+                <fullName>Analisar se carta é válida</fullName>
+                <default>false</default>
+                <label>Analisar se carta é válida</label>
+            </value>
+            <value>
+                <fullName>[BY] Enviar guia ITBI por email para comprador</fullName>
+                <default>false</default>
+                <label>[BY] Enviar guia ITBI por email para comprador</label>
+            </value>
+            <value>
+                <fullName>Anexar cópia do contrato de financiamento no iSolve para emissão do ITBI</fullName>
+                <default>false</default>
+                <label>Anexar cópia do contrato de financiamento no iSolve para emissão do ITBI</label>
+            </value>
+            <value>
+                <fullName>[BY] Realizar acompanhamento da oferta</fullName>
+                <default>false</default>
+                <label>[BY] Realizar acompanhamento da oferta</label>
+            </value>
+            <value>
+                <fullName>[BY] Realizar acompanhamento da proposta</fullName>
+                <default>false</default>
+                <label>[BY] Realizar acompanhamento da proposta</label>
+            </value>
+            <value>
+                <fullName>[SL] Realizar acompanhamento da oferta</fullName>
+                <default>false</default>
+                <label>[SL] Realizar acompanhamento da oferta</label>
+            </value>
+            <value>
+                <fullName>[SL] Realizar acompanhamento da proposta</fullName>
+                <default>false</default>
+                <label>[SL] Realizar acompanhamento da proposta</label>
+            </value>
+            <value>
+                <fullName>Contestação do resultado de crédito do banco</fullName>
+                <default>false</default>
+                <label>Contestação do resultado de crédito do banco</label>
+            </value>
+            <value>
+                <fullName>[BY] Lembrar cliente das vantagens do financiamento interno e entender se vai seguir com análise de crédito</fullName>
+                <default>false</default>
+                <label>[BY] Lembrar cliente das vantagens do financiamento interno e entender se vai seguir com análise de crédito</label>
+            </value>
+            <value>
+                <fullName>[SL] 2º contato: Lembrar seller que o prazo para solicitar a averbação está próxima.</fullName>
+                <default>false</default>
+                <label>[SL] 2º contato: Lembrar seller que o prazo para solicitar a averbação está próxima.</label>
+            </value>
+            <value>
+                <fullName>[SL] {seller_name}: tentar onboarding por ligação</fullName>
+                <default>false</default>
+                <label>[SL] {seller_name}: tentar onboarding por ligação</label>
+            </value>
+            <value>
+                <fullName>Conferir anotações do CRN para entender porque ITBI não foi emitido</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conferir anotações do CRN para entender porque ITBI não foi emitido</label>
+            </value>
+            <value>
+                <fullName>Conferir anotações do CRN para entender se o atraso é devido</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conferir anotações do CRN para entender se o atraso é devido</label>
+            </value>
+            <value>
+                <fullName>Confirmar se banco realizou pagamento ao vendedor e atualizar iSolve. Se não tiver pago, reforçar prazo.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Confirmar se banco realizou pagamento ao vendedor e atualizar iSolve. Se não tiver pago, reforçar prazo.</label>
+            </value>
+            <value>
+                <fullName>Informar que inquilino não quer comprar o imóvel e o processo vai seguir</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Informar que inquilino não quer comprar o imóvel e o processo vai seguir</label>
+            </value>
+            <value>
+                <fullName>Pegar matrícula do Vendas e anexar documentos para pagamento de saldo no sistema do banco</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pegar matrícula do Vendas e anexar documentos para pagamento de saldo no sistema do banco</label>
+            </value>
+            <value>
+                <fullName>[BY] Cobrar do comprador o envio da matrícula atualizada e anexar no Vendas</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[BY] Cobrar do comprador o envio da matrícula atualizada e anexar no Vendas</label>
+            </value>
+            <value>
+                <fullName>[BY] Comunicar comprador que banco já pagou o saldo para vendedor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[BY] Comunicar comprador que banco já pagou o saldo para vendedor</label>
+            </value>
+            <value>
+                <fullName>[BY] Entrar em contato com o EN e informar a falta de pagamento do Sinal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[BY] Entrar em contato com o EN e informar a falta de pagamento do Sinal</label>
+            </value>
+            <value>
+                <fullName>[BY] Enviar mensagem de finalização do processo para comprador.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[BY] Enviar mensagem de finalização do processo para comprador.</label>
+            </value>
+            <value>
+                <fullName>[BY] Informar que estamos cobrando do banco o pagamento do saldo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[BY] Informar que estamos cobrando do banco o pagamento do saldo</label>
+            </value>
+            <value>
+                <fullName>[BY] Olá, {XX}. Vi que o seu registro já foi finalizado. Me envia a matrícula atualizada para dar andamento ao processo, por favor?</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[BY] Olá, {XX}. Vi que o seu registro já foi finalizado. Me envia a matrícula atualizada para dar andamento ao processo, por favor?</label>
+            </value>
+            <value>
+                <fullName>[BY] Orientar comprador a entregar matrícula atualizada + via do contrato na agência responsável</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[BY] Orientar comprador a entregar matrícula atualizada + via do contrato na agência responsável</label>
+            </value>
+            <value>
+                <fullName>[BY] Solicitar matrícula atualizada após registro para comprador</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[BY] Solicitar matrícula atualizada após registro para comprador</label>
+            </value>
+            <value>
+                <fullName>[SL]  Informar que estamos cobrando do banco o pagamento do saldo</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[SL]  Informar que estamos cobrando do banco o pagamento do saldo</label>
+            </value>
+            <value>
+                <fullName>[SL] Enviar mensagem de finalização do processo para vendedor.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[SL] Enviar mensagem de finalização do processo para vendedor.</label>
+            </value>
+            <value>
+                <fullName>[SL] Falar com vendedor que conferiu no sistema que o saldo já foi pago</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>[SL] Falar com vendedor que conferiu no sistema que o saldo já foi pago</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

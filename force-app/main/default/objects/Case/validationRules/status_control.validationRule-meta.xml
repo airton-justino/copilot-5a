@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>status_control</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT(
+    OR(
+        ISPICKVAL(Status, &quot;AWAITING_OWNER_ACTION&quot;),
+        ISPICKVAL(Status, &quot;On Hold&quot;),
+        ISPICKVAL(Status, &quot;Escalated&quot;),
+        ISPICKVAL(Status, &quot;Closed&quot;)
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Invalid status, choose a valid status and try again</errorMessage>
+</ValidationRule>

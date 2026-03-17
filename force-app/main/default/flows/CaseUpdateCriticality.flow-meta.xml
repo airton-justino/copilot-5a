@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>CaseType</name>
+        <label>Tipo de Caso</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Resultado padrão</defaultConnectorLabel>
+        <rules>
+            <name>Onboarding</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Key Logistics For Rent Onboarding</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UpdateCasePriorityOnboarding</targetReference>
+            </connector>
+            <label>Onboarding</label>
+        </rules>
+        <rules>
+            <name>Offboarding</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Key Logistics For Rent Offboarding</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UpdateCasePriorityOffboarding</targetReference>
+            </connector>
+            <label>Offboarding</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>ForPriorityOffboarding</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    DATEVALUE($Record.Inspection__r.ExecutedAt__c) &lt; (TODAY() - 3), &quot;Critical&quot;,
+    CASE(
+        TODAY() - DATEVALUE($Record.Inspection__r.ExecutedAt__c),
+        3, &quot;Critical&quot;,
+        2, &quot;High&quot;,
+        1, &quot;Medium&quot;,
+        0, &quot;Low&quot;,
+        &quot;Low&quot;
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>ForPriorityOnboarding</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    {!$Record.RelatedContract__r.StartDate} &lt;= TODAY(), &quot;Critical&quot;,
+    IF(
+        {!$Record.RelatedContract__r.StartDate} = TODAY() + 1, &quot;High&quot;,
+        IF(
+            {!$Record.RelatedContract__r.StartDate} = TODAY() + 2, &quot;Medium&quot;,
+            &quot;Low&quot;
+        )
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>PriorityByFlowOffboarding</name>
+        <dataType>String</dataType>
+        <expression>{!ForPriorityOffboarding} &amp; &quot;Offboarding&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>PriorityByFlowOnboarding</name>
+        <dataType>String</dataType>
+        <expression>{!ForPriorityOnboarding} &amp; &quot;Onboarding&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>SLAOffboarding</name>
+        <dataType>String</dataType>
+        <expression>&quot;D&quot; &amp;
+IF(
+    TODAY() = DATEVALUE($Record.Inspection__r.ExecutedAt__c),
+    &quot;0&quot;,
+    &quot;+&quot; &amp; TEXT(TODAY() - DATEVALUE($Record.Inspection__r.ExecutedAt__c))
+)</expression>
+    </formulas>
+    <formulas>
+        <name>SLAOnboarding</name>
+        <dataType>String</dataType>
+        <expression>&quot;D&quot; &amp;
+IF(
+    TODAY() = {!$Record.RelatedContract__r.StartDate},
+    &quot;0&quot;,
+    IF(
+        TODAY() &gt; {!$Record.RelatedContract__r.StartDate},
+        &quot;+&quot; &amp; TEXT(TODAY() - {!$Record.RelatedContract__r.StartDate}),
+        &quot;-&quot; &amp; TEXT({!$Record.RelatedContract__r.StartDate} - TODAY())
+    )
+)</expression>
+    </formulas>
+    <interviewLabel>[Case] Update Criti {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Case] Update Priority by Dates</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>UpdateCasePriorityOffboarding</name>
+        <label>Update Case Priority - Offboarding</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>CriticalitySla__c</field>
+            <value>
+                <elementReference>SLAOffboarding</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <elementReference>ForPriorityOffboarding</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PriorityByFlow__c</field>
+            <value>
+                <elementReference>PriorityByFlowOffboarding</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UpdateCasePriorityOnboarding</name>
+        <label>Update Case Priority - Onboarding</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>CriticalitySla__c</field>
+            <value>
+                <elementReference>SLAOnboarding</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <elementReference>ForPriorityOnboarding</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>PriorityByFlow__c</field>
+            <value>
+                <elementReference>PriorityByFlowOnboarding</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CaseType</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2) AND 3</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Key Logistics For Rent Onboarding</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Key Logistics For Rent Offboarding</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2025-11-12</startDate>
+            <startTime>01:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

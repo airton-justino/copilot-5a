@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRNStatusSignatureScheduled__c</fullName>
+    <externalId>false</externalId>
+    <formula>(
+	IF(
+		MID(LTAuxCRNStatusSignatureScheduled__c, 12, 10) = &quot;**/**/****&quot;,
+		TODAY(),
+		DATE(
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 18, 4)),
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 15, 2)),
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 12, 2))
+		)
+	) - 
+	DATE(
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 7, 4)),
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 4, 2)),
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 1, 2))
+	)
+)
++
+IF(
+  MID(LTAuxCRNStatusSignatureScheduled__c, 22, 1) = &quot;;&quot;,
+  IF(
+		MID(LTAuxCRNStatusSignatureScheduled__c, 34, 10) = &quot;**/**/****&quot;,
+		TODAY(),
+		DATE(
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 40, 4)),
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 37, 2)),
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 34, 2))
+		)
+	) - 
+	DATE(
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 29, 4)),
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 26, 2)),
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 23, 2))
+	),
+	0
+)
++
+IF(
+  MID(LTAuxCRNStatusSignatureScheduled__c, 44, 1) = &quot;;&quot;,
+  IF(
+		MID(LTAuxCRNStatusSignatureScheduled__c, 56, 10) = &quot;**/**/****&quot;,
+		TODAY(),
+		DATE(
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 62, 4)),
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 59, 2)),
+			VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 56, 2))
+		)
+	) - 
+	DATE(
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 51, 4)),
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 48, 2)),
+		VALUE(MID(LTAuxCRNStatusSignatureScheduled__c, 45, 2))
+	),
+	0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CRN StatusSignatureScheduled</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

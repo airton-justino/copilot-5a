@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PriorityLighthouse__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+Priority,
+&quot;Low&quot;, &quot;🟢 4 - Baixo&quot;,
+&quot;Medium&quot;, &quot;🔵 3 - Médio&quot;,
+&quot;High&quot;, &quot;🟠 2 - Alto&quot;,
+&quot;Critical&quot;, &quot;🔴 1 - Crítico&quot;,
+&quot;Emergency&quot;, &quot;🚨 Emergencial&quot;,
+&quot;⚪&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Prioridade</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

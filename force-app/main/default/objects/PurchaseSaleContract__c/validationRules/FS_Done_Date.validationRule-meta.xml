@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_Done_Date</fullName>
+    <active>true</active>
+    <description>Regra de validação para quando status do CRI for &quot;Finalizado&quot;, obrigatório colocar a Data de finalização do Registro</description>
+    <errorConditionFormula>AND(
+CONTAINS($Profile.Name, &quot;CRN&quot;),
+TEXT(FS_CRIStatus__c) = &apos;FINISHED&apos;,
+ISBLANK(CRIDoneDateCCV__c) 
+)</errorConditionFormula>
+    <errorDisplayField>CRIDoneDateCCV__c</errorDisplayField>
+    <errorMessage>Caso o Status do CRI for Finalizado, preencha a Data da finalização do registro.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_DEED_SIGNED_ITBI</fullName>
+    <active>true</active>
+    <description>Preencha os campos: Pagamento do saldo e Status do ITBI</description>
+    <errorConditionFormula>AND(
+NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)),
+NOT(ISPICKVAL(ITBIStatus__c, &apos;ITBI_PAID&apos;)),
+ISPICKVAL(CRNStatus__c, &apos;DEED_SIGNED&apos;))</errorConditionFormula>
+    <errorMessage>Preencha os campos: Pagamento do saldo e Status do ITBI</errorMessage>
+</ValidationRule>

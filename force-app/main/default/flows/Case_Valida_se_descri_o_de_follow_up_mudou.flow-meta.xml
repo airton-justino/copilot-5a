@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <decisions>
+        <name>DescriptionChanged</name>
+        <label>Alterou descrição?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Não</defaultConnectorLabel>
+        <rules>
+            <name>SimDescriptionChanged</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>FormulaIsChangedFollowUpComentary</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CraeteComentCase</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <description>Valida se descrição de follow up mudou.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>FormulaIsChangedFollowUpComentary</name>
+        <dataType>Boolean</dataType>
+        <expression>AND(
+ISCHANGED({!$Record.followUpDescription__c}),
+NOT(ISBLANK({!$Record.followUpDescription__c}))
+)</expression>
+    </formulas>
+    <interviewLabel>[Case] - Valida se descrição de follow up mudou {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Case] - Valida se descrição de follow up mudou</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>CraeteComentCase</name>
+        <label>Comentário do caso</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>CommentBody</field>
+            <value>
+                <elementReference>$Record.followUpDescription__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsPublished</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>CaseComment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>DescriptionChanged</targetReference>
+        </connector>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaskInteractionType__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Task Interaction Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tarefa simples</fullName>
+                <default>true</default>
+                <label>Tarefa simples</label>
+            </value>
+            <value>
+                <fullName>Tarefa com resposta de cliente</fullName>
+                <default>false</default>
+                <label>Tarefa com resposta de cliente</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

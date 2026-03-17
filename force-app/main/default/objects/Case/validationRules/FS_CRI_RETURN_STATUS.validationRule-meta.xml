@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_CRI_RETURN_STATUS</fullName>
+    <active>false</active>
+    <description>Você não tem permissão para retroceder o status. Apenas avançar no fluxo.</description>
+    <errorConditionFormula>AND(
+    CONTAINS($Profile.Name, &quot;CRN&quot;),
+    
+    CASE(TEXT(FS_StatusCRI__c),
+        &quot;NOT_STARTED&quot;, 1,
+        &quot;PRE_CRI&quot;, 2,
+        &quot;PRENOTED&quot;, 3,
+        &quot;FINISHED&quot;, 4,
+        &quot;CANCELED&quot;, 5,
+        0
+    ) &lt;
+    
+    CASE(TEXT(PRIORVALUE(FS_StatusCRI__c)),
+        &quot;NOT_STARTED&quot;, 1,
+        &quot;PRE_CRI&quot;, 2,
+        &quot;PRENOTED&quot;, 3,
+        &quot;FINISHED&quot;, 4,
+        &quot;CANCELED&quot;, 5,
+        0
+    )
+)</errorConditionFormula>
+    <errorDisplayField>FS_StatusCRI__c</errorDisplayField>
+    <errorMessage>Você não tem permissão para retroceder o status. Apenas avançar no fluxo.</errorMessage>
+</ValidationRule>

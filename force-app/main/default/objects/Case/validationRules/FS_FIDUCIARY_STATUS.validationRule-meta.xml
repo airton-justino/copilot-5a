@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_FIDUCIARY_STATUS</fullName>
+    <active>false</active>
+    <description>Para atualizar o status é imprescindível o recebimento do comprovante do pagamento.</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(PurchaseSaleContract__r.ProofPaymentReceived__c, &apos;YES&apos;)),
+NOT(CONTAINS(LastModifiedBy.Profile.Name, &quot;Admin&quot;)),
+OR(
+ISPICKVAL(FS_FID_AlienationStatus__c, &apos;PAYMENT_MADE&apos;),
+ISPICKVAL(FS_FID_AlienationStatus__c, &apos;RECEIPT_OF_SETTLEMENT_RECEIVED_BY_CRN&apos;)))</errorConditionFormula>
+    <errorMessage>Para atualizar o status é imprescindível o recebimento do comprovante do pagamento.</errorMessage>
+</ValidationRule>

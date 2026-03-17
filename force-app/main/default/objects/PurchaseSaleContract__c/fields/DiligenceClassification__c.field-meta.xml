@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DiligenceClassification__c</fullName>
+    <label>Classificação de Diligência</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NOT_STARTED</fullName>
+                <default>false</default>
+                <label>Não Iniciada</label>
+            </value>
+            <value>
+                <fullName>NO_APPOINTMENT</fullName>
+                <default>false</default>
+                <label>Sem Apontamentos</label>
+            </value>
+            <value>
+                <fullName>LOW_RISK</fullName>
+                <default>false</default>
+                <label>Risco Baixo</label>
+            </value>
+            <value>
+                <fullName>MODERATE_RISK</fullName>
+                <default>false</default>
+                <label>Risco Moderado</label>
+            </value>
+            <value>
+                <fullName>HIGH_RISK</fullName>
+                <default>false</default>
+                <label>Risco Alto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

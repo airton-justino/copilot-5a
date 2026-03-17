@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Add contract id to list</description>
+        <name>AddContractIdToList</name>
+        <label>Add contract id to list</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>AllContractsIds</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>LoopOnFundContracts.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopOnFundContracts</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Add related contract to createds</description>
+        <name>AddRelatedContractToCreateds</name>
+        <label>Add related contract to createds</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>ContractsWithCreatedCases</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>LoopOnFoundContracts.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopOnFoundCases</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Create new cases based on contract record</description>
+        <name>CreateNewKeyDeliveryCases</name>
+        <label>Create new key delivery cases</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>NewCase.RelatedContract__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LoopOnContracts.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCase.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetKeyLogisticsForRentRecordType.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCase.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Key Logistics For Rent Onboarding</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCase.ContractId__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LoopOnContracts.ExternalId__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCase.EntitlementId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetKeyDeliveryForRentEntitlement.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCase.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LoopOnContracts.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCase.Source__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>SalesforceEvent</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewCaseList</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>NewCase</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LoopOnContracts</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Check contracts with no case</description>
+        <name>CheckContractsWithNoCase</name>
+        <label>Check contracts with no case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>LoopOnContracts</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Contracts with case</defaultConnectorLabel>
+        <rules>
+            <name>ContractsWithNoCase</name>
+            <conditionLogic>NOT(1)</conditionLogic>
+            <conditions>
+                <leftValueReference>ContractsWithCreatedCases</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>LoopOnContracts.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CreateNewKeyDeliveryCases</targetReference>
+            </connector>
+            <label>Contracts with no case</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if contract have case</description>
+        <name>CheckIfContractHaveCase</name>
+        <label>Check if contract have case</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>LoopOnFoundCases</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Else</defaultConnectorLabel>
+        <rules>
+            <name>ContractWithNoEelatedCase</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LoopOnFoundContracts.Id</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>LoopOnFoundCases.RelatedContract__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AddRelatedContractToCreateds</targetReference>
+            </connector>
+            <label>Contract with no related case</label>
+        </rules>
+    </decisions>
+    <description>Case creation of record type &quot;KeyLogisticsForRent&quot; and type &quot;Onboarding&quot; based on contract start date</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Get last 3 days</description>
+        <name>Last3Days</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() - 3</expression>
+    </formulas>
+    <formulas>
+        <description>Get next 3 days</description>
+        <name>Next3Days</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 3</expression>
+    </formulas>
+    <interviewLabel>[Case] Case Creation Key Logistics {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Case] Case Creation Key Logistics For Rent Onboarding</label>
+    <loops>
+        <description>Loop on contracts</description>
+        <name>LoopOnContracts</name>
+        <label>Loop on contracts</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>GetContractsInsideDateRange</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>CheckContractsWithNoCase</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>InsertNewCases</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop on found cases</description>
+        <name>LoopOnFoundCases</name>
+        <label>Loop on found cases</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>GetCasesRelatedToContracts</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>CheckIfContractHaveCase</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>LoopOnFoundContracts</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop on found contracts</description>
+        <name>LoopOnFoundContracts</name>
+        <label>Loop on found contracts</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>GetContractsInsideDateRange</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>LoopOnFoundCases</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>GetKeyDeliveryForRentEntitlement</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <description>Loop on found contracts</description>
+        <name>LoopOnFundContracts</name>
+        <label>Loop on found contracts</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <collectionReference>GetContractsInsideDateRange</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>AddContractIdToList</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>GetKeyLogisticsForRentRecordType</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Insert new cases</description>
+        <name>InsertNewCases</name>
+        <label>Insert new cases</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>NewCaseList</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>Get cases related to contracts</description>
+        <name>GetCasesRelatedToContracts</name>
+        <label>Get cases related to contracts</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>LoopOnFoundContracts</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>GetKeyLogisticsForRentRecordType.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Key Logistics For Rent Onboarding</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RelatedContract__c</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>AllContractsIds</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get contracts inside date range (D+3 and D-3)</description>
+        <name>GetContractsInsideDateRange</name>
+        <label>Get contracts inside date range</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>LoopOnFundContracts</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StartDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>Last3Days</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartDate</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>Next3Days</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Contract</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get key delivery for rent entitlement</description>
+        <name>GetKeyDeliveryForRentEntitlement</name>
+        <label>Get key delivery for rent entitlement</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>LoopOnContracts</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Direito Key Delivery For Rent</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Entitlement</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get key logistics for rent record type</description>
+        <name>GetKeyLogisticsForRentRecordType</name>
+        <label>Get key logistics for rent record type</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>GetCasesRelatedToContracts</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>KeyLogisticsForRent</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Case</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>GetContractsInsideDateRange</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Get all contracts ids</description>
+        <name>AllContractsIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Contracts with created cases</description>
+        <name>ContractsWithCreatedCases</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>New case record</description>
+        <name>NewCase</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <description>New case list</description>
+        <name>NewCaseList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+</Flow>

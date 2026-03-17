@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_SENDER_DESTINATION_CRN</fullName>
+    <active>true</active>
+    <description>Você não pode responder à própria solicitação. Para atualizá-la, use a opção de editar a sua mensagem.</description>
+    <errorConditionFormula>AND(
+    NOT(ISPICKVAL(PendencyType__c, &apos;Validação&apos;)),
+    NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)),
+    OR(
+        /* Caso 1: Usuário CRN editando &quot;Resposta da Solicitação&quot; em registro criado por ele mesmo */
+        AND(
+            LEFT($Profile.Name, LEN(&quot;CRN&quot;)) = &quot;CRN&quot;,
+            LEFT(CreatedBy.Profile.Name, LEN(&quot;CRN&quot;)) = &quot;CRN&quot;,
+            ISCHANGED(CommentResponse__c)
+        ),
+
+        /* Caso 2: Usuário CRN editando &quot;Solicitação&quot; em registro não criado por ele */
+        AND(
+            LEFT($Profile.Name, LEN(&quot;CRN&quot;)) = &quot;CRN&quot;,
+            LEFT(CreatedBy.Profile.Name, LEN(&quot;CRN&quot;)) &lt;&gt; &quot;CRN&quot;,
+            ISCHANGED(Comments__c)
+        ),
+
+        /* Caso 3: Usuário CRN editando &quot;Pendência&quot; em registro não criado por ele */
+        AND(
+            LEFT($Profile.Name, LEN(&quot;CRN&quot;)) = &quot;CRN&quot;,
+            LEFT(CreatedBy.Profile.Name, LEN(&quot;CRN&quot;)) &lt;&gt; &quot;CRN&quot;, 
+            ISCHANGED(Name)
+        ),
+
+        /* Caso 4: Usuário CRN editando &quot;Tipo de Solicitação&quot; em registro não criado por ele */
+        
+        AND(
+            LEFT($Profile.Name, LEN(&quot;CRN&quot;)) = &quot;CRN&quot;,
+            LEFT(CreatedBy.Profile.Name, LEN(&quot;CRN&quot;)) &lt;&gt; &quot;CRN&quot;,
+            ISCHANGED(PendencyType__c)
+        ),
+
+        /* BLOQUEIOS DE CRIAÇÃO */
+
+        /* Criando registro: CommentResponse__c deve estar em branco */
+        AND(
+        ISNEW(),
+        CommentResponse__c != null)
+        )
+        )</errorConditionFormula>
+    <errorMessage>Você não pode editar a solicitação de outra pessoa. Para responder, utilize o campo Resposta da Solicitação.</errorMessage>
+</ValidationRule>

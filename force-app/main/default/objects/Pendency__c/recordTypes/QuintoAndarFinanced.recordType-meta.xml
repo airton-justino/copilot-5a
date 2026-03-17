@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QuintoAndarFinanced</fullName>
+    <active>true</active>
+    <label>QuintoAndar (Financiado)</label>
+    <picklistValues>
+        <picklist>OpenSource__c</picklist>
+        <values>
+            <fullName>Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PendencyType__c</picklist>
+        <values>
+            <fullName>Emissão</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reemissão</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validação</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Concluída</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Em Análise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nova</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

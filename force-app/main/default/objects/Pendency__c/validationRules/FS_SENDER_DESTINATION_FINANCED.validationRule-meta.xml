@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_SENDER_DESTINATION_FINANCED</fullName>
+    <active>true</active>
+    <description>Você não tem permissão para editar este campo.</description>
+    <errorConditionFormula>AND(
+    NOT(
+       CONTAINS(
+       LOWER($Profile.Name),
+       &quot;admin&quot;)),
+    ISPICKVAL(PendencyType__c, &apos;Validação&apos;),
+    OR(
+        /* Caso 1: Usuário do Front editando &quot;Resposta da Solicitação&quot;*/
+        AND(
+            $Profile.Name != &quot;Agent - ForSale - Financiamento_Profile&quot;,
+            ISCHANGED(CommentResponse__c)
+        ),
+
+        /* Caso 2: Usuário do Back editando &quot;Solicitação&quot;*/
+        AND(
+            $Profile.Name = &quot;Agent - ForSale - Financiamento_Profile&quot;,
+            ISCHANGED(Comments__c)
+        )))</errorConditionFormula>
+    <errorMessage>Você não tem permissão para editar este campo.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ForSaleQueue_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Fila do ForSale</label>
+    <queue>ForSaleQueue</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

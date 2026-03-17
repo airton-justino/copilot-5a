@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PriorityByFlow__c</fullName>
+    <label>Prioridade por fluxo</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CriticalOnboarding</fullName>
+                <default>false</default>
+                <label>Crítico (Onboarding)</label>
+            </value>
+            <value>
+                <fullName>HighOnboarding</fullName>
+                <default>false</default>
+                <label>Alto (Onboarding)</label>
+            </value>
+            <value>
+                <fullName>MediumOnboarding</fullName>
+                <default>false</default>
+                <label>Médio (Onboarding)</label>
+            </value>
+            <value>
+                <fullName>LowOnboarding</fullName>
+                <default>false</default>
+                <label>Baixo (Onboarding)</label>
+            </value>
+            <value>
+                <fullName>EmergencyOnboarding</fullName>
+                <default>false</default>
+                <label>Emergencial (Onboarding)</label>
+            </value>
+            <value>
+                <fullName>NotEmergencyOnboarding</fullName>
+                <default>false</default>
+                <label>Não Emergencial (Onboarding)</label>
+            </value>
+            <value>
+                <fullName>CriticalOffboarding</fullName>
+                <default>false</default>
+                <label>Crítico (Offboarding)</label>
+            </value>
+            <value>
+                <fullName>HighOffboarding</fullName>
+                <default>false</default>
+                <label>Alto (Offboarding)</label>
+            </value>
+            <value>
+                <fullName>MediumOffboarding</fullName>
+                <default>false</default>
+                <label>Médio (Offboarding)</label>
+            </value>
+            <value>
+                <fullName>LowOffboarding</fullName>
+                <default>false</default>
+                <label>Baixo (Offboarding)</label>
+            </value>
+            <value>
+                <fullName>EmergencyOffboarding</fullName>
+                <default>false</default>
+                <label>Emergencial (Offboarding)</label>
+            </value>
+            <value>
+                <fullName>NotEmergencyOffboarding</fullName>
+                <default>false</default>
+                <label>Não Emergencial (Offboarding)</label>
+            </value>
+            <value>
+                <fullName>HighInternal</fullName>
+                <default>false</default>
+                <label>Alto (Interno)</label>
+            </value>
+            <value>
+                <fullName>LowInternal</fullName>
+                <default>false</default>
+                <label>Baixo (Interno)</label>
+            </value>
+            <value>
+                <fullName>CriticalInternal</fullName>
+                <default>false</default>
+                <label>Crítico (Interno)</label>
+            </value>
+            <value>
+                <fullName>EmergencyInternal</fullName>
+                <default>false</default>
+                <label>Emergencial (Interno)</label>
+            </value>
+            <value>
+                <fullName>MediumInternal</fullName>
+                <default>false</default>
+                <label>Médio (Interno)</label>
+            </value>
+            <value>
+                <fullName>NotEmergencyInternal</fullName>
+                <default>false</default>
+                <label>Não Emergencial (Interno)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

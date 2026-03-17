@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRNQueue_PurchaseSaleContract</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Fila CRN</label>
+    <queue>CRNQueue</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

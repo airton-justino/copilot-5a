@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CityPropertyAllowsIssueITBIForm__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(CityPropertyAllowsIssueITBI__c, &apos;Barueri&apos;), &quot;Sim&quot;,
+IF(ISPICKVAL(CityPropertyAllowsIssueITBI__c, &apos;Diadema&apos;), &quot;Sim&quot;,
+IF(ISPICKVAL(CityPropertyAllowsIssueITBI__c, &apos;Guarulhos&apos;), &quot;Sim&quot;,
+IF(ISPICKVAL(CityPropertyAllowsIssueITBI__c, &apos;Novo Hamburgo&apos;), &quot;Sim&quot;,
+IF(ISPICKVAL(CityPropertyAllowsIssueITBI__c, &apos;Osasco&apos;), &quot;Sim&quot;,
+IF(ISPICKVAL(CityPropertyAllowsIssueITBI__c, &apos;Rio de Janeiro&apos;), &quot;Sim&quot;,
+IF(ISPICKVAL(CityPropertyAllowsIssueITBI__c, &apos;São Bernardo do Campo&apos;), &quot;Sim&quot;,
+IF(ISPICKVAL(CityPropertyAllowsIssueITBI__c, &apos;São Paulo&apos;), &quot;Sim&quot;, &quot;Não&quot;))))))))</formula>
+    <label>Cidade do Imóvel Permite 5A Emitir ITBI?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

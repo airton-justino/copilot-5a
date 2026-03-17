@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_ReasonsLTOverrun__c</fullName>
+    <label>Motivos do estouro do LT</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pendente entrega de documentos por BY</fullName>
+                <default>false</default>
+                <label>Pendente entrega de documentos por BY</label>
+            </value>
+            <value>
+                <fullName>Pendente entrega de documentos por SL</fullName>
+                <default>false</default>
+                <label>Pendente entrega de documentos por SL</label>
+            </value>
+            <value>
+                <fullName>Pendente aprovação da minuta por BY</fullName>
+                <default>false</default>
+                <label>Pendente aprovação da minuta por BY</label>
+            </value>
+            <value>
+                <fullName>Pendente aprovação da minuta por SL</fullName>
+                <default>false</default>
+                <label>Pendente aprovação da minuta por SL</label>
+            </value>
+            <value>
+                <fullName>Aguardando agendamento por BY</fullName>
+                <default>false</default>
+                <label>Aguardando agendamento por BY</label>
+            </value>
+            <value>
+                <fullName>Aguardando agendamento por SL</fullName>
+                <default>false</default>
+                <label>Aguardando agendamento por SL</label>
+            </value>
+            <value>
+                <fullName>Compra e Venda Casada</fullName>
+                <default>false</default>
+                <label>Compra e Venda Casada</label>
+            </value>
+            <value>
+                <fullName>Solicitação de aditivo</fullName>
+                <default>false</default>
+                <label>Solicitação de aditivo</label>
+            </value>
+            <value>
+                <fullName>Alteração da data de assinatura</fullName>
+                <default>false</default>
+                <label>Alteração da data de assinatura</label>
+            </value>
+            <value>
+                <fullName>Assinatura a longo prazo</fullName>
+                <default>false</default>
+                <label>Assinatura a longo prazo</label>
+            </value>
+            <value>
+                <fullName>Registro ou averbação precedentes</fullName>
+                <default>false</default>
+                <label>Registro ou averbação precedentes</label>
+            </value>
+            <value>
+                <fullName>Migrado de outro fluxo</fullName>
+                <default>false</default>
+                <label>Migrado de outro fluxo</label>
+            </value>
+            <value>
+                <fullName>Aguardando liberação dos recursos financeiros BY</fullName>
+                <default>false</default>
+                <label>Aguardando liberação dos recursos financeiros BY</label>
+            </value>
+            <value>
+                <fullName>Aguardando pagamento de ITBI</fullName>
+                <default>false</default>
+                <label>Aguardando pagamento de ITBI</label>
+            </value>
+            <value>
+                <fullName>Aguardando Certidões</fullName>
+                <default>false</default>
+                <label>Aguardando Certidões</label>
+            </value>
+            <value>
+                <fullName>Aguardando liberação</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aguardando liberação</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

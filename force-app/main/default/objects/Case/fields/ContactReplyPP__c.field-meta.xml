@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactReplyPP__c</fullName>
+    <label>ContactReplyPP</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>pending</fullName>
+                <default>false</default>
+                <label>pending</label>
+            </value>
+            <value>
+                <fullName>success</fullName>
+                <default>false</default>
+                <label>success</label>
+            </value>
+            <value>
+                <fullName>failure</fullName>
+                <default>false</default>
+                <label>failure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

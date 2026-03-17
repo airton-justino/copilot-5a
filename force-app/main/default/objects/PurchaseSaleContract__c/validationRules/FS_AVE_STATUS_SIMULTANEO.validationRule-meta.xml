@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_AVE_STATUS_SIMULTANEO</fullName>
+    <active>true</active>
+    <description>Não é possível alterar o status da averbação se não for simultâneo ao registro.</description>
+    <errorConditionFormula>AND(
+NOT(ISPICKVAL(ConcomitantRegistration__c, &apos;Não&apos;)), 
+NOT(ISPICKVAL(FS_EndorsementStatusCCV__c, &apos;CANCELED&apos;)),
+ISCHANGED(FS_EndorsementStatusCCV__c),
+NOT(CONTAINS($Profile.Name, &quot;Admin&quot;)))</errorConditionFormula>
+    <errorMessage>Não é possível alterar o status da averbação se não for simultâneo ao registro.</errorMessage>
+</ValidationRule>

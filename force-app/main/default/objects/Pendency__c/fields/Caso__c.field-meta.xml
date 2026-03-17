@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caso__c</fullName>
+    <label>Caso</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Só é possível criar a solicitação para a Id da Offer igual ao caso e CCV.</errorMessage>
+        <filterItems>
+            <field>$Source.PurchaseSaleContract__c</field>
+            <operation>equals</operation>
+            <valueField>Case.PurchaseSaleContract__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Solicitações</relationshipLabel>
+    <relationshipName>Pendencias</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
